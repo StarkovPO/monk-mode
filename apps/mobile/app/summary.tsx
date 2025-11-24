@@ -6,22 +6,24 @@ export default function Summary() {
   const router = useRouter();
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Great Job! 🎉</Text>
-      <View style={styles.stats}>
-        <View style={styles.statItem}>
-          <Text style={styles.statValue}>15:00</Text>
-          <Text style={styles.statLabel}>Total Time</Text>
+      <View style={styles.content}>
+        <Text style={styles.title}>Well Done!</Text>
+        <View style={styles.stats}>
+          <View style={styles.statItem}>
+            <Text style={styles.statValue}>15:00</Text>
+            <Text style={styles.statLabel}>Total Time</Text>
+          </View>
+          <View style={styles.statItem}>
+            <Text style={styles.statValue}>3/3</Text>
+            <Text style={styles.statLabel}>Exercises</Text>
+          </View>
         </View>
-        <View style={styles.statItem}>
-          <Text style={styles.statValue}>3/3</Text>
-          <Text style={styles.statLabel}>Exercises</Text>
+        <Text style={styles.message}>
+          Thank you for taking time to meditate today.
+        </Text>
+        <View style={styles.streakCard}>
+          <Text style={styles.streakText}>🔥 3 day streak</Text>
         </View>
-      </View>
-      <Text style={styles.gratitude}>
-        Thank you for taking time to meditate today.
-      </Text>
-      <View style={styles.streaks}>
-        <Text style={styles.streakText}>🔥 3 day streak</Text>
       </View>
       <Pressable style={styles.button} onPress={() => router.push('/')}>
         <Text style={styles.buttonText}>Back to Home</Text>
@@ -33,61 +35,68 @@ export default function Summary() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#0F172A',
+    backgroundColor: '#FAFAFA',
     padding: 24,
+  },
+  content: {
+    flex: 1,
     justifyContent: 'center',
   },
   title: {
-    color: '#F8FAFC',
-    fontSize: 32,
+    color: '#1A1A1A',
+    fontSize: 36,
     fontWeight: '700',
-    marginBottom: 32,
+    marginBottom: 48,
     textAlign: 'center',
+    letterSpacing: -0.5,
   },
   stats: {
     flexDirection: 'row',
     justifyContent: 'space-around',
-    marginBottom: 32,
+    marginBottom: 48,
   },
   statItem: {
     alignItems: 'center',
   },
   statValue: {
-    color: '#22C55E',
-    fontSize: 36,
-    fontWeight: '800',
+    color: '#1A1A1A',
+    fontSize: 40,
+    fontWeight: '700',
   },
   statLabel: {
-    color: '#94A3B8',
+    color: '#666666',
     fontSize: 14,
-    marginTop: 4,
+    marginTop: 8,
   },
-  gratitude: {
-    color: '#94A3B8',
+  message: {
+    color: '#666666',
     fontSize: 16,
     textAlign: 'center',
     marginBottom: 32,
     lineHeight: 24,
+    paddingHorizontal: 24,
   },
-  streaks: {
-    backgroundColor: '#1F2937',
-    padding: 16,
+  streakCard: {
+    backgroundColor: '#FFFFFF',
+    padding: 20,
     borderRadius: 12,
-    marginBottom: 24,
+    borderWidth: 1,
+    borderColor: '#E0E0E0',
   },
   streakText: {
-    color: '#F8FAFC',
+    color: '#1A1A1A',
     fontSize: 18,
     fontWeight: '600',
     textAlign: 'center',
   },
   button: {
-    backgroundColor: '#22C55E',
-    padding: 16,
-    borderRadius: 12,
+    backgroundColor: '#1A1A1A',
+    paddingVertical: 18,
+    paddingHorizontal: 24,
+    borderRadius: 8,
   },
   buttonText: {
-    color: '#F8FAFC',
+    color: '#FFFFFF',
     fontSize: 16,
     fontWeight: '600',
     textAlign: 'center',

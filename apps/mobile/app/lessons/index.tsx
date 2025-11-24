@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, Pressable, ScrollView } from 'react-native';
-import { Link } from 'expo-router';
+import { Link, useRouter } from 'expo-router';
 
 const lessons = [
   { id: '1', title: 'Introduction to Meditation', summary: 'Learn the basics' },
@@ -14,8 +14,14 @@ const lessons = [
 ];
 
 export default function Lessons() {
+  const router = useRouter();
   return (
     <ScrollView style={styles.container}>
+      <View style={styles.header}>
+        <Pressable onPress={() => router.back()} style={styles.backButton}>
+          <Text style={styles.backText}>← Back</Text>
+        </Pressable>
+      </View>
       <Text style={styles.title}>Meditation Lessons</Text>
       {lessons.map((lesson) => (
         <Link key={lesson.id} href={`/lessons/${lesson.id}`} asChild>
@@ -32,29 +38,43 @@ export default function Lessons() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#0F172A',
+    backgroundColor: '#FAFAFA',
     padding: 24,
   },
-  title: {
-    color: '#F8FAFC',
-    fontSize: 28,
-    fontWeight: '700',
+  header: {
     marginBottom: 24,
   },
+  backButton: {
+    paddingVertical: 8,
+  },
+  backText: {
+    color: '#1A1A1A',
+    fontSize: 16,
+    fontWeight: '500',
+  },
+  title: {
+    color: '#1A1A1A',
+    fontSize: 32,
+    fontWeight: '700',
+    marginBottom: 24,
+    letterSpacing: -0.5,
+  },
   lessonCard: {
-    backgroundColor: '#1F2937',
-    padding: 16,
+    backgroundColor: '#FFFFFF',
+    padding: 20,
     borderRadius: 12,
     marginBottom: 12,
+    borderWidth: 1,
+    borderColor: '#E0E0E0',
   },
   lessonTitle: {
-    color: '#F8FAFC',
+    color: '#1A1A1A',
     fontSize: 18,
     fontWeight: '600',
     marginBottom: 4,
   },
   lessonSummary: {
-    color: '#94A3B8',
+    color: '#666666',
     fontSize: 14,
   },
 });

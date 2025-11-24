@@ -1,6 +1,6 @@
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView } from 'react-native';
-import { useLocalSearchParams } from 'expo-router';
+import { View, Text, StyleSheet, ScrollView, Pressable } from 'react-native';
+import { useLocalSearchParams, useRouter } from 'expo-router';
 
 const lessons: Record<string, { title: string; content: string }> = {
   '1': {
@@ -19,10 +19,16 @@ const lessons: Record<string, { title: string; content: string }> = {
 
 export default function LessonDetail() {
   const { id } = useLocalSearchParams<{ id: string }>();
+  const router = useRouter();
   const lesson = lessons[id] || { title: `Lesson ${id}`, content: 'Content coming soon...' };
   
   return (
     <ScrollView style={styles.container}>
+      <View style={styles.header}>
+        <Pressable onPress={() => router.back()} style={styles.backButton}>
+          <Text style={styles.backText}>← Back</Text>
+        </Pressable>
+      </View>
       <Text style={styles.title}>{lesson.title}</Text>
       <Text style={styles.content}>{lesson.content}</Text>
     </ScrollView>
@@ -32,18 +38,30 @@ export default function LessonDetail() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#0F172A',
+    backgroundColor: '#FAFAFA',
     padding: 24,
   },
+  header: {
+    marginBottom: 24,
+  },
+  backButton: {
+    paddingVertical: 8,
+  },
+  backText: {
+    color: '#1A1A1A',
+    fontSize: 16,
+    fontWeight: '500',
+  },
   title: {
-    color: '#F8FAFC',
+    color: '#1A1A1A',
     fontSize: 28,
     fontWeight: '700',
     marginBottom: 24,
+    letterSpacing: -0.5,
   },
   content: {
-    color: '#94A3B8',
+    color: '#333333',
     fontSize: 16,
-    lineHeight: 24,
+    lineHeight: 26,
   },
 });

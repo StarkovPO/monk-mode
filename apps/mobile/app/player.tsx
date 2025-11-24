@@ -6,23 +6,26 @@ export default function Player() {
   const router = useRouter();
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Meditation Session</Text>
-      <Text style={styles.exerciseName}>Breath Awareness</Text>
-      <Text style={styles.timer}>00:00</Text>
-      <Text style={styles.reminder}>Focus on your natural breath...</Text>
-      <View style={styles.controls}>
-        <Pressable style={styles.controlButton}>
-          <Text style={styles.buttonText}>Pause</Text>
-        </Pressable>
-        <Pressable style={styles.controlButton}>
-          <Text style={styles.buttonText}>Skip</Text>
+      <View style={styles.header}>
+        <Pressable onPress={() => router.back()} style={styles.backButton}>
+          <Text style={styles.backText}>← Back</Text>
         </Pressable>
       </View>
-      <Pressable style={styles.cancelButton} onPress={() => router.back()}>
-        <Text style={styles.buttonText}>Cancel</Text>
-      </Pressable>
+      <View style={styles.content}>
+        <Text style={styles.exerciseName}>Breath Awareness</Text>
+        <Text style={styles.timer}>00:00</Text>
+        <Text style={styles.instruction}>Focus on your natural breath...</Text>
+      </View>
+      <View style={styles.controls}>
+        <Pressable style={styles.controlButton}>
+          <Text style={styles.controlText}>Pause</Text>
+        </Pressable>
+        <Pressable style={styles.controlButton}>
+          <Text style={styles.controlText}>Skip</Text>
+        </Pressable>
+      </View>
       <Pressable style={styles.finishButton} onPress={() => router.push('/summary')}>
-        <Text style={styles.buttonText}>Finish</Text>
+        <Text style={styles.finishText}>Finish Session</Text>
       </Pressable>
     </View>
   );
@@ -31,35 +34,44 @@ export default function Player() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#0F172A',
+    backgroundColor: '#FAFAFA',
     padding: 24,
-    justifyContent: 'center',
   },
-  title: {
-    color: '#F8FAFC',
-    fontSize: 24,
-    fontWeight: '700',
-    marginBottom: 32,
-    textAlign: 'center',
+  header: {
+    marginBottom: 24,
+  },
+  backButton: {
+    paddingVertical: 8,
+  },
+  backText: {
+    color: '#1A1A1A',
+    fontSize: 16,
+    fontWeight: '500',
+  },
+  content: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   exerciseName: {
-    color: '#94A3B8',
+    color: '#666666',
     fontSize: 18,
+    marginBottom: 24,
     textAlign: 'center',
-    marginBottom: 16,
   },
   timer: {
-    color: '#F8FAFC',
-    fontSize: 64,
-    fontWeight: '800',
+    color: '#1A1A1A',
+    fontSize: 72,
+    fontWeight: '300',
+    marginBottom: 24,
     textAlign: 'center',
-    marginBottom: 16,
   },
-  reminder: {
-    color: '#94A3B8',
+  instruction: {
+    color: '#666666',
     fontSize: 16,
     textAlign: 'center',
-    marginBottom: 48,
+    paddingHorizontal: 32,
+    lineHeight: 24,
   },
   controls: {
     flexDirection: 'row',
@@ -67,25 +79,27 @@ const styles = StyleSheet.create({
     marginBottom: 24,
   },
   controlButton: {
-    backgroundColor: '#1F2937',
-    padding: 16,
-    borderRadius: 12,
-    marginHorizontal: 8,
-    minWidth: 100,
+    backgroundColor: '#FFFFFF',
+    paddingVertical: 16,
+    paddingHorizontal: 32,
+    borderRadius: 8,
+    borderWidth: 1,
+    borderColor: '#E0E0E0',
+    marginHorizontal: 6,
   },
-  cancelButton: {
-    backgroundColor: '#7F1D1D',
-    padding: 16,
-    borderRadius: 12,
-    marginBottom: 12,
+  controlText: {
+    color: '#1A1A1A',
+    fontSize: 16,
+    fontWeight: '600',
   },
   finishButton: {
-    backgroundColor: '#22C55E',
-    padding: 16,
-    borderRadius: 12,
+    backgroundColor: '#1A1A1A',
+    paddingVertical: 18,
+    paddingHorizontal: 24,
+    borderRadius: 8,
   },
-  buttonText: {
-    color: '#F8FAFC',
+  finishText: {
+    color: '#FFFFFF',
     fontSize: 16,
     fontWeight: '600',
     textAlign: 'center',
