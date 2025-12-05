@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView, Pressable } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 
 const lessons: Record<string, { title: string; content: string }> = {
@@ -43,45 +44,84 @@ export default function LessonDetail() {
   const lesson = lessons[id] || { title: `Lesson ${id}`, content: 'Content coming soon...' };
   
   return (
-    <ScrollView style={styles.container}>
-      <View style={styles.header}>
-        <Pressable onPress={() => router.back()} style={styles.backButton}>
-          <Text style={styles.backText}>← Back</Text>
+    <SafeAreaView style={styles.wrapper} edges={['top']}>
+      <ScrollView style={styles.container} contentContainerStyle={styles.scrollContent}>
+        <Text style={styles.title}>{lesson.title}</Text>
+        <Text style={styles.content}>{lesson.content}</Text>
+      </ScrollView>
+      
+      <View style={styles.bottomActions}>
+        <Pressable 
+          onPress={() => router.back()} 
+          style={({ pressed }) => [
+            styles.backButton,
+            pressed && styles.backButtonPressed
+          ]}
+          hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
+        >
+          <Text style={styles.backText}>← Back to Lessons</Text>
         </Pressable>
       </View>
-      <Text style={styles.title}>{lesson.title}</Text>
-      <Text style={styles.content}>{lesson.content}</Text>
-    </ScrollView>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  wrapper: {
     flex: 1,
     backgroundColor: '#FAFAFA',
+  },
+  container: {
+    flex: 1,
+  },
+  scrollContent: {
     padding: 24,
-  },
-  header: {
-    marginBottom: 24,
-  },
-  backButton: {
-    paddingVertical: 8,
-  },
-  backText: {
-    color: '#1A1A1A',
-    fontSize: 16,
-    fontWeight: '500',
+    paddingBottom: 40,
   },
   title: {
     color: '#1A1A1A',
     fontSize: 28,
     fontWeight: '700',
     marginBottom: 24,
+    marginTop: 8,
     letterSpacing: -0.5,
   },
   content: {
     color: '#333333',
     fontSize: 16,
     lineHeight: 26,
+  },
+  bottomActions: {
+    paddingTop: 12,
+    paddingBottom: 24,
+    paddingHorizontal: 24,
+    borderTopWidth: 1,
+    borderTopColor: '#E5E5E5',
+    backgroundColor: '#FAFAFA',
+    alignItems: 'center',
+  },
+  backButton: {
+    backgroundColor: '#FFFFFF',
+    paddingVertical: 12,
+    paddingHorizontal: 24,
+    borderRadius: 24,
+    minWidth: 180,
+    minHeight: 44,
+    justifyContent: 'center',
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.1,
+    shadowRadius: 2,
+    elevation: 2,
+  },
+  backButtonPressed: {
+    backgroundColor: '#F0F0F0',
+    opacity: 0.8,
+  },
+  backText: {
+    color: '#1A1A1A',
+    fontSize: 16,
+    fontWeight: '600',
   },
 });

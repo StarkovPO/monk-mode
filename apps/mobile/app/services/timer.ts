@@ -76,7 +76,7 @@ export class MeditationTimer {
       clearInterval(this.intervalId);
       this.intervalId = null;
     }
-    this.onTick(this.state);
+    this.onTick({ ...this.state });
   }
 
   /**
@@ -155,7 +155,7 @@ export class MeditationTimer {
       if (this.state.remainingSec === 0) {
         this.handleExerciseComplete();
       } else {
-        this.onTick(this.state);
+        this.onTick({ ...this.state });
       }
     }
   }
@@ -183,7 +183,8 @@ export class MeditationTimer {
     if (this.state.remainingSec === 0) {
       this.handleExerciseComplete();
     } else {
-      this.onTick(this.state);
+      // Pass a new object to trigger React state update
+      this.onTick({ ...this.state });
     }
   }
 
@@ -214,7 +215,7 @@ export class MeditationTimer {
       this.state.currentExerciseIndex = nextIndex;
       this.state.remainingSec = this.exercises[nextIndex].durationSec;
       this.state.lastTickTime = Date.now();
-      this.onTick(this.state);
+      this.onTick({ ...this.state });
     }
   }
 }
