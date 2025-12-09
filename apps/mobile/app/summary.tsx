@@ -79,6 +79,9 @@ export default function Summary() {
           </View>
         )}
       </View>
+      <Pressable style={styles.buttonSecondary} onPress={() => router.push('/activity')}>
+        <Text style={styles.buttonTextSecondary}>My Activity</Text>
+      </Pressable>
       <Pressable style={styles.button} onPress={() => router.push('/')}>
         <Text style={styles.buttonText}>Back to Home</Text>
       </Pressable>
@@ -162,8 +165,23 @@ const styles = StyleSheet.create({
     paddingHorizontal: 24,
     borderRadius: 8,
   },
+  buttonSecondary: {
+    backgroundColor: '#FFFFFF',
+    paddingVertical: 18,
+    paddingHorizontal: 24,
+    borderRadius: 8,
+    borderWidth: 1,
+    borderColor: '#E0E0E0',
+    marginBottom: 12,
+  },
   buttonText: {
     color: '#FFFFFF',
+    fontSize: 16,
+    fontWeight: '600',
+    textAlign: 'center',
+  },
+  buttonTextSecondary: {
+    color: '#1A1A1A',
     fontSize: 16,
     fontWeight: '600',
     textAlign: 'center',

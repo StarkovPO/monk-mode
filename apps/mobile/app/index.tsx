@@ -7,16 +7,27 @@ export default function Home() {
     <View style={styles.container}>
       <Text style={styles.title}>Monk Mode</Text>
       <Text style={styles.subtitle}>Find peace through meditation</Text>
-      <Link href="/preset" asChild>
-        <Pressable style={styles.button}>
-          <Text style={styles.buttonText}>Start Session</Text>
-        </Pressable>
-      </Link>
-      <Link href="/lessons" asChild>
-        <Pressable style={[styles.button, styles.buttonSecondary]}>
-          <Text style={styles.buttonTextSecondary}>Browse Lessons</Text>
-        </Pressable>
-      </Link>
+      <Pressable style={styles.button} onPress={() => {}}>
+        <Link href="/preset" asChild>
+          <Pressable style={styles.buttonInner}>
+            <Text style={styles.buttonText}>Start Session</Text>
+          </Pressable>
+        </Link>
+      </Pressable>
+      <Pressable style={[styles.button, styles.buttonSecondary]}>
+        <Link href="/lessons" asChild>
+          <Pressable style={styles.buttonInner}>
+            <Text style={styles.buttonTextSecondary}>Browse Lessons</Text>
+          </Pressable>
+        </Link>
+      </Pressable>
+      <Pressable style={[styles.button, styles.buttonSecondary]}>
+        <Link href="/activity" asChild>
+          <Pressable style={styles.buttonInner}>
+            <Text style={styles.buttonTextSecondary}>My Activity</Text>
+          </Pressable>
+        </Link>
+      </Pressable>
     </View>
   );
 }
@@ -44,10 +55,14 @@ const styles = StyleSheet.create({
   },
   button: {
     backgroundColor: '#1A1A1A',
-    paddingVertical: 18,
-    paddingHorizontal: 24,
     borderRadius: 8,
     marginBottom: 16,
+    overflow: 'hidden',
+  },
+  buttonInner: {
+    paddingVertical: 18,
+    paddingHorizontal: 24,
+    width: '100%',
   },
   buttonSecondary: {
     backgroundColor: '#FFFFFF',
