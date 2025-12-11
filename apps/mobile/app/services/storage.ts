@@ -6,8 +6,10 @@ const KEYS = {
   LAST_SESSION: '@monk_mode:last_session',
   SOUND_ENABLED: '@monk_mode:sound_enabled',
   ACHIEVEMENTS: '@monk_mode:achievements',
+  LANGUAGE: '@monk_mode:language',
 };
 export const ACHIEVEMENTS_KEY = KEYS.ACHIEVEMENTS;
+export const LANGUAGE_KEY = KEYS.LANGUAGE;
 
 // Types
 export interface Streaks {
@@ -129,6 +131,7 @@ export async function clearAllData(): Promise<void> {
       KEYS.LAST_SESSION,
       KEYS.SOUND_ENABLED,
       KEYS.ACHIEVEMENTS,
+      KEYS.LANGUAGE,
     ]);
   } catch (error) {
     console.error('Error clearing data:', error);

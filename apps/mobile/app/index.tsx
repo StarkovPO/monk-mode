@@ -1,30 +1,45 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, Pressable } from 'react-native';
 import { Link } from 'expo-router';
+import { t, getCurrentLanguage } from './services/i18n';
+import LanguageSwitcher from './components/LanguageSwitcher';
 
 export default function Home() {
+  // Force re-render when language changes
+  const [, forceUpdate] = useState(0);
+  
+  useEffect(() => {
+    // Set up interval to check for language changes
+    const interval = setInterval(() => {
+      forceUpdate(prev => prev + 1);
+    }, 100);
+    
+    return () => clearInterval(interval);
+  }, []);
+  
   return (
     <View style={styles.container}>
+      <LanguageSwitcher />
       <Text style={styles.title}>Monk Mode</Text>
-      <Text style={styles.subtitle}>Find peace through meditation</Text>
+      <Text style={styles.subtitle}>{t('home.subtitle')}</Text>
       <Pressable style={styles.button} onPress={() => {}}>
         <Link href="/preset" asChild>
           <Pressable style={styles.buttonInner}>
-            <Text style={styles.buttonText}>Start Session</Text>
+            <Text style={styles.buttonText}>{t('home.startMeditation')}</Text>
           </Pressable>
         </Link>
       </Pressable>
       <Pressable style={[styles.button, styles.buttonSecondary]}>
         <Link href="/lessons" asChild>
           <Pressable style={styles.buttonInner}>
-            <Text style={styles.buttonTextSecondary}>Browse Lessons</Text>
+            <Text style={styles.buttonTextSecondary}>{t('home.lessons')}</Text>
           </Pressable>
         </Link>
       </Pressable>
       <Pressable style={[styles.button, styles.buttonSecondary]}>
         <Link href="/activity" asChild>
           <Pressable style={styles.buttonInner}>
-            <Text style={styles.buttonTextSecondary}>My Activity</Text>
+            <Text style={styles.buttonTextSecondary}>{t('home.activity')}</Text>
           </Pressable>
         </Link>
       </Pressable>
