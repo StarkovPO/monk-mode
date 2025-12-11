@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "__APP_NAME__": "Monk Mode",
+  "home": {
+    "welcome": "Bienvenido a la meditación",
+    "subtitle": "Encuentra tu paz interior",
+    "startMeditation": "Iniciar Meditación",
+    "startTimer": "Iniciar Temporizador",
+    "lessons": "Lecciones",
+    "activity": "Mi Actividad",
+    "preset": "Ajustes Preestablecidos"
+  }
+}

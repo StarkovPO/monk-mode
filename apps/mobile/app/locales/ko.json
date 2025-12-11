@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "__APP_NAME__": "Monk Mode",
+  "home": {
+    "welcome": "명상에 오신 것을 환영합니다",
+    "subtitle": "내면의 평화를 찾으세요",
+    "startMeditation": "명상 시작",
+    "startTimer": "타이머 시작",
+    "lessons": "레슨",
+    "activity": "내 활동",
+    "preset": "프리셋"
+  }
+}
