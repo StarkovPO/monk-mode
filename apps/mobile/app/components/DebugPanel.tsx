@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, Pressable, ScrollView } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { resetAchievements } from '../services/achievements';
 
 // Use the same storage key as the app
 const STORAGE_KEY = '@monk_mode:streaks';
@@ -64,6 +65,16 @@ export function DebugPanel({ onDataChanged }: DebugPanelProps) {
       console.log('📊 Current streaks:', JSON.parse(data || '{}'));
     } catch (error) {
       console.error('❌ Failed to view data:', error);
+    }
+  };
+
+  const clearAchievements = async () => {
+    try {
+      await resetAchievements();
+      console.log('✅ Achievements reset');
+      if (onDataChanged) onDataChanged();
+    } catch (error) {
+      console.error('❌ Failed to reset achievements:', error);
     }
   };
 
@@ -153,6 +164,13 @@ export function DebugPanel({ onDataChanged }: DebugPanelProps) {
           onPress={viewCurrent}
         >
           <Text style={styles.buttonTextSecondary}>👁️ View Current (Console)</Text>
+        </Pressable>
+
+        <Pressable
+          style={[styles.button, styles.buttonSecondary]}
+          onPress={clearAchievements}
+        >
+          <Text style={styles.buttonTextSecondary}>🔄 Reset Achievements</Text>
         </Pressable>
 
         <Pressable

@@ -5,12 +5,15 @@ import { useRouter } from 'expo-router';
 import { getCurrentStreaks } from './services/streaks';
 import type { Streaks } from './services/storage';
 import { DebugPanel } from './components/DebugPanel';
+import { AchievementGrid } from './components/AchievementGrid';
+import { checkAndUnlockAchievements } from './services/achievements';
 
 export default function Activity() {
   const router = useRouter();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [streaks, setStreaks] = useState<Streaks | null>(null);
+  const [achievementsRefreshKey, setAchievementsRefreshKey] = useState(0);
 
   useEffect(() => {
     loadStreakData();
@@ -22,16 +25,24 @@ export default function Activity() {
       setError(null);
       const data = await getCurrentStreaks();
       setStreaks(data);
+      try {
+        await checkAndUnlockAchievements({
+          type: 'streak_update',
+          metadata: {
+            currentStreak: data.currentStreak,
+            totalSessions: data.totalDays,
+          },
+        });
+        setAchievementsRefreshKey((prev) => prev + 1);
+      } catch (achievementError) {
+        console.error('Error updating achievements:', achievementError);
+      }
     } catch (err) {
       console.error('Error loading streak data:', err);
       setError('Failed to load streak data');
     } finally {
       setLoading(false);
     }
-  };
-
-  const formatDays = (count: number): string => {
-    return count === 1 ? '1 day' : `${count} days`;
   };
 
   if (loading) {
@@ -105,27 +116,10 @@ export default function Activity() {
               <Text style={styles.statLabel}>Total sessions</Text>
               <Text style={styles.statValue}>{streaks?.totalDays || 0}</Text>
             </View>
-
-            {/* Achievements Section */}
-            <View style={styles.achievementsSection}>
-              <Text style={styles.achievementsTitle}>Achievements</Text>
-              <View style={styles.achievementsRow}>
-                <View style={styles.achievementItem}>
-                  <View style={styles.achievementCircle} />
-                  <Text style={styles.achievementName}>First Step</Text>
-                </View>
-                <View style={styles.achievementItem}>
-                  <View style={styles.achievementCircle} />
-                  <Text style={styles.achievementName}>Weekly Warrior</Text>
-                </View>
-                <View style={styles.achievementItem}>
-                  <View style={styles.achievementCircle} />
-                  <Text style={styles.achievementName}>Mindful Month</Text>
-                </View>
-              </View>
-            </View>
           </View>
         )}
+
+        <AchievementGrid refreshTrigger={achievementsRefreshKey} />
       </ScrollView>
       
       <View style={styles.bottomActions}>
@@ -234,39 +228,6 @@ const styles = StyleSheet.create({
     color: '#1A1A1A',
     fontSize: 18,
     fontWeight: '500',
-  },
-  // Achievements Section
-  achievementsSection: {
-    marginTop: 60,
-  },
-  achievementsTitle: {
-    color: '#666666',
-    fontSize: 14,
-    fontWeight: '500',
-    textTransform: 'uppercase',
-    letterSpacing: 1,
-    marginBottom: 24,
-  },
-  achievementsRow: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-  },
-  achievementItem: {
-    alignItems: 'center',
-  },
-  achievementCircle: {
-    width: 80,
-    height: 80,
-    borderRadius: 40,
-    backgroundColor: '#D0D0D0',
-    marginBottom: 12,
-  },
-  achievementName: {
-    color: '#999999',
-    fontSize: 12,
-    fontWeight: '400',
-    textAlign: 'center',
-    maxWidth: 90,
   },
   // Empty State
   emptyState: {

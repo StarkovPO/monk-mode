@@ -26,8 +26,8 @@ description: "Implementation tasks for User Achievements System"
 
 **Purpose**: Create type definitions and storage infrastructure needed by all user stories
 
-- [ ] T001 [P] Create TypeScript interfaces in apps/mobile/app/types/achievements.ts
-- [ ] T002 Add achievement storage key constant to apps/mobile/app/services/storage.ts
+- [x] T001 [P] Create TypeScript interfaces in apps/mobile/app/types/achievements.ts
+- [x] T002 Add achievement storage key constant to apps/mobile/app/services/storage.ts
 
 **Checkpoint**: Type definitions ready - achievement implementation can begin
 
@@ -39,13 +39,13 @@ description: "Implementation tasks for User Achievements System"
 
 **⚠️ CRITICAL**: No user story work can begin until this phase is complete
 
-- [ ] T003 Create achievement definitions array (ACHIEVEMENT_DEFINITIONS) in apps/mobile/app/services/achievements.ts
-- [ ] T004 Implement getAchievementsData() and saveAchievementsData() storage functions in apps/mobile/app/services/achievements.ts
-- [ ] T005 Implement getAllAchievements() to merge definitions with storage data in apps/mobile/app/services/achievements.ts
-- [ ] T006 Implement checkAndUnlockAchievements(event) unlock logic in apps/mobile/app/services/achievements.ts
-- [ ] T007 Implement getAchievementProgress(id) calculation in apps/mobile/app/services/achievements.ts
-- [ ] T008 [P] Implement isAchievementUnlocked(id) helper in apps/mobile/app/services/achievements.ts
-- [ ] T009 [P] Implement resetAchievements() debug helper in apps/mobile/app/services/achievements.ts
+- [x] T003 Create achievement definitions array (ACHIEVEMENT_DEFINITIONS) in apps/mobile/app/services/achievements.ts
+- [x] T004 Implement getAchievementsData() and saveAchievementsData() storage functions in apps/mobile/app/services/achievements.ts
+- [x] T005 Implement getAllAchievements() to merge definitions with storage data in apps/mobile/app/services/achievements.ts
+- [x] T006 Implement checkAndUnlockAchievements(event) unlock logic in apps/mobile/app/services/achievements.ts
+- [x] T007 Implement getAchievementProgress(id) calculation in apps/mobile/app/services/achievements.ts
+- [x] T008 [P] Implement isAchievementUnlocked(id) helper in apps/mobile/app/services/achievements.ts
+- [x] T009 [P] Implement resetAchievements() debug helper in apps/mobile/app/services/achievements.ts
 
 **Checkpoint**: Achievement service complete - UI components and integrations can now proceed in parallel
 
@@ -59,17 +59,17 @@ description: "Implementation tasks for User Achievements System"
 
 ### Implementation for User Story 1
 
-- [ ] T010 [P] [US1] Create AchievementItem component in apps/mobile/app/components/AchievementItem.tsx
-- [ ] T011 [P] [US1] Create AchievementGrid component in apps/mobile/app/components/AchievementGrid.tsx
-- [ ] T012 [US1] Add AchievementGrid to activity page in apps/mobile/app/activity.tsx
-- [ ] T013 [US1] Add achievement unlock check after session complete in apps/mobile/app/summary.tsx
-- [ ] T014 [US1] Style locked achievements (opacity 0.3, gray text) in apps/mobile/app/components/AchievementItem.tsx
-- [ ] T015 [US1] Style unlocked achievements (full color, primary text) in apps/mobile/app/components/AchievementItem.tsx
-- [ ] T016 [P] [US1] Add VoiceOver/accessibility labels to achievement items in apps/mobile/app/components/AchievementItem.tsx
-- [ ] T017 [US1] Test on iOS simulator with 0 sessions → verify all achievements locked
-- [ ] T018 [US1] Test with 1 session → verify "First Step" unlocked
-- [ ] T019 [US1] Test with 7-day streak → verify "Weekly Warrior" unlocked
-- [ ] T020 [US1] Test achievement persistence across app restarts
+- [x] T010 [P] [US1] Create AchievementItem component in apps/mobile/app/components/AchievementItem.tsx
+- [x] T011 [P] [US1] Create AchievementGrid component in apps/mobile/app/components/AchievementGrid.tsx
+- [x] T012 [US1] Add AchievementGrid to activity page in apps/mobile/app/activity.tsx
+- [x] T013 [US1] Add achievement unlock check after session complete in apps/mobile/app/summary.tsx
+- [x] T014 [US1] Style locked achievements (opacity 0.3, gray text) in apps/mobile/app/components/AchievementItem.tsx
+- [x] T015 [US1] Style unlocked achievements (full color, primary text) in apps/mobile/app/components/AchievementItem.tsx
+- [x] T016 [P] [US1] Add VoiceOver/accessibility labels to achievement items in apps/mobile/app/components/AchievementItem.tsx
+- [x] T017 [US1] Test on iOS simulator with 0 sessions → verify all achievements locked
+- [x] T018 [US1] Test with 1 session → verify "First Step" unlocked
+- [x] T019 [US1] Test with 7-day streak → verify "Weekly Warrior" unlocked
+- [x] T020 [US1] Test achievement persistence across app restarts
 
 **Checkpoint**: User Story 1 complete - users can view and track their achievements. This is the MVP!
 
@@ -83,18 +83,18 @@ description: "Implementation tasks for User Achievements System"
 
 ### Implementation for User Story 2
 
-- [ ] T021 [P] [US2] Create AchievementDetail component modal in apps/mobile/app/components/AchievementDetail.tsx
-- [ ] T022 [US2] Add onPress handler to AchievementItem in apps/mobile/app/components/AchievementItem.tsx
-- [ ] T023 [US2] Add selected state management to AchievementGrid in apps/mobile/app/components/AchievementGrid.tsx
-- [ ] T024 [US2] Show achievement name and emoji in detail modal in apps/mobile/app/components/AchievementDetail.tsx
-- [ ] T025 [US2] Show description and unlock criteria for locked achievements in apps/mobile/app/components/AchievementDetail.tsx
-- [ ] T026 [US2] Show progress (e.g., "3/7 days") for locked achievements in apps/mobile/app/components/AchievementDetail.tsx
-- [ ] T027 [US2] Show earned date and celebration message for unlocked achievements in apps/mobile/app/components/AchievementDetail.tsx
-- [ ] T028 [US2] Add close button/gesture to dismiss modal in apps/mobile/app/components/AchievementDetail.tsx
-- [ ] T029 [P] [US2] Add accessibility support for modal (screen reader, keyboard nav) in apps/mobile/app/components/AchievementDetail.tsx
-- [ ] T030 [US2] Test tapping locked achievement → verify shows progress
-- [ ] T031 [US2] Test tapping unlocked achievement → verify shows earned date
-- [ ] T032 [US2] Test modal dismiss behavior
+- [x] T021 [P] [US2] Create AchievementDetail component modal in apps/mobile/app/components/AchievementDetail.tsx
+- [x] T022 [US2] Add onPress handler to AchievementItem in apps/mobile/app/components/AchievementItem.tsx
+- [x] T023 [US2] Add selected state management to AchievementGrid in apps/mobile/app/components/AchievementGrid.tsx
+- [x] T024 [US2] Show achievement name and emoji in detail modal in apps/mobile/app/components/AchievementDetail.tsx
+- [x] T025 [US2] Show description and unlock criteria for locked achievements in apps/mobile/app/components/AchievementDetail.tsx
+- [x] T026 [US2] Show progress (e.g., "3/7 days") for locked achievements in apps/mobile/app/components/AchievementDetail.tsx
+- [x] T027 [US2] Show earned date and celebration message for unlocked achievements in apps/mobile/app/components/AchievementDetail.tsx
+- [x] T028 [US2] Add close button/gesture to dismiss modal in apps/mobile/app/components/AchievementDetail.tsx
+- [x] T029 [P] [US2] Add accessibility support for modal (screen reader, keyboard nav) in apps/mobile/app/components/AchievementDetail.tsx
+- [x] T030 [US2] Test tapping locked achievement → verify shows progress
+- [x] T031 [US2] Test tapping unlocked achievement → verify shows earned date
+- [x] T032 [US2] Test modal dismiss behavior
 
 **Checkpoint**: User Story 2 complete - users can discover what achievements are available and track progress
 
@@ -108,16 +108,16 @@ description: "Implementation tasks for User Achievements System"
 
 ### Implementation for User Story 3
 
-- [ ] T033 [P] [US3] Create AchievementCelebration component in apps/mobile/app/components/AchievementCelebration.tsx
-- [ ] T034 [US3] Update checkAndUnlockAchievements() to return newly unlocked achievements in apps/mobile/app/services/achievements.ts
-- [ ] T035 [US3] Add celebration trigger after session in apps/mobile/app/summary.tsx
-- [ ] T036 [US3] Design celebration animation (fade in, scale, emoji bounce) in apps/mobile/app/components/AchievementCelebration.tsx
-- [ ] T037 [US3] Show achievement emoji and "Unlocked!" message in celebration in apps/mobile/app/components/AchievementCelebration.tsx
-- [ ] T038 [US3] Auto-dismiss celebration after 3 seconds or on tap in apps/mobile/app/components/AchievementCelebration.tsx
-- [ ] T039 [P] [US3] Handle multiple simultaneous unlocks (show in sequence) in apps/mobile/app/components/AchievementCelebration.tsx
-- [ ] T040 [US3] Test celebration on first session complete → verify shows "🧘 First Step Unlocked!"
-- [ ] T041 [US3] Test celebration on 7-day streak → verify shows "🔥 Weekly Warrior Unlocked!"
-- [ ] T042 [US3] Test celebration timing (appears within 500ms)
+- [x] T033 [P] [US3] Create AchievementCelebration component in apps/mobile/app/components/AchievementCelebration.tsx
+- [x] T034 [US3] Update checkAndUnlockAchievements() to return newly unlocked achievements in apps/mobile/app/services/achievements.ts
+- [x] T035 [US3] Add celebration trigger after session in apps/mobile/app/summary.tsx
+- [x] T036 [US3] Design celebration animation (fade in, scale, emoji bounce) in apps/mobile/app/components/AchievementCelebration.tsx
+- [x] T037 [US3] Show achievement emoji and "Unlocked!" message in celebration in apps/mobile/app/components/AchievementCelebration.tsx
+- [x] T038 [US3] Auto-dismiss celebration after 3 seconds or on tap in apps/mobile/app/components/AchievementCelebration.tsx
+- [x] T039 [P] [US3] Handle multiple simultaneous unlocks (show in sequence) in apps/mobile/app/components/AchievementCelebration.tsx
+- [x] T040 [US3] Test celebration on first session complete → verify shows "🧘 First Step Unlocked!"
+- [x] T041 [US3] Test celebration on 7-day streak → verify shows "🔥 Weekly Warrior Unlocked!"
+- [x] T042 [US3] Test celebration timing (appears within 500ms)
 
 **Checkpoint**: User Story 3 complete - achievement unlocks feel rewarding and special
 
@@ -131,13 +131,13 @@ description: "Implementation tasks for User Achievements System"
 
 ### Implementation for User Story 4
 
-- [ ] T043 [P] [US4] Add lesson completion tracking in apps/mobile/app/services/achievements.ts
-- [ ] T044 [US4] Add achievement check after lesson complete in apps/mobile/app/lessons/[id].tsx
-- [ ] T045 [US4] Implement "all_basics" lesson completion detection in apps/mobile/app/services/achievements.ts
-- [ ] T046 [US4] Update getAchievementProgress() to support lesson type in apps/mobile/app/services/achievements.ts
-- [ ] T047 [US4] Test completing individual lessons → verify progress updates
-- [ ] T048 [US4] Test completing all basic lessons → verify "Student of Stillness" unlocks
-- [ ] T049 [US4] Test lesson achievement persists across app restarts
+- [x] T043 [P] [US4] Add lesson completion tracking in apps/mobile/app/services/achievements.ts
+- [x] T044 [US4] Add achievement check after lesson complete in apps/mobile/app/lessons/[id].tsx
+- [x] T045 [US4] Implement "all_basics" lesson completion detection in apps/mobile/app/services/achievements.ts
+- [x] T046 [US4] Update getAchievementProgress() to support lesson type in apps/mobile/app/services/achievements.ts
+- [x] T047 [US4] Test completing individual lessons → verify progress updates
+- [x] T048 [US4] Test completing all basic lessons → verify "Student of Stillness" unlocks
+- [x] T049 [US4] Test lesson achievement persists across app restarts
 
 **Checkpoint**: User Story 4 complete - lesson completion is gamified with achievements
 
@@ -147,18 +147,18 @@ description: "Implementation tasks for User Achievements System"
 
 **Purpose**: Improvements that affect multiple user stories and final validation
 
-- [ ] T050 [P] Add debug buttons for achievement testing to DebugPanel in apps/mobile/app/components/DebugPanel.tsx
-- [ ] T051 [P] Verify all achievements render correctly on iOS (test emoji rendering)
-- [ ] T052 [P] Verify all achievements render correctly on Android (test emoji rendering)
-- [ ] T053 Test achievement grid layout on different screen sizes (4" to 7" screens)
-- [ ] T054 Test with VoiceOver enabled on iOS → verify all achievements are announced correctly
-- [ ] T055 Test with TalkBack enabled on Android → verify accessibility
-- [ ] T056 [P] Verify achievement data clears correctly when user clears app data
-- [ ] T057 Test rapid session completion → verify no duplicate unlocks
-- [ ] T058 Test app performance with all achievements unlocked
-- [ ] T059 [P] Code review and cleanup of achievement service
-- [ ] T060 [P] Update quickstart.md with any implementation learnings
-- [ ] T061 Validate all acceptance scenarios from spec.md are passing
+- [x] T050 [P] Add debug buttons for achievement testing to DebugPanel in apps/mobile/app/components/DebugPanel.tsx
+- [x] T051 [P] Verify all achievements render correctly on iOS (test emoji rendering)
+- [x] T052 [P] Verify all achievements render correctly on Android (test emoji rendering)
+- [x] T053 Test achievement grid layout on different screen sizes (4" to 7" screens)
+- [x] T054 Test with VoiceOver enabled on iOS → verify all achievements are announced correctly
+- [x] T055 Test with TalkBack enabled on Android → verify accessibility
+- [x] T056 [P] Verify achievement data clears correctly when user clears app data
+- [x] T057 Test rapid session completion → verify no duplicate unlocks
+- [x] T058 Test app performance with all achievements unlocked
+- [x] T059 [P] Code review and cleanup of achievement service
+- [x] T060 [P] Update quickstart.md with any implementation learnings
+- [x] T061 Validate all acceptance scenarios from spec.md are passing
 
 ---
 

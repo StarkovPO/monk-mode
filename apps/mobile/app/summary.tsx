@@ -1,8 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { View, Text, StyleSheet, Pressable } from 'react-native';
 import { useRouter, useLocalSearchParams } from 'expo-router';
 import { getCurrentStreaks } from './services/streaks';
 import { Streaks } from './services/storage';
+import { checkAndUnlockAchievements } from './services/achievements';
+import { AchievementCelebration } from './components/AchievementCelebration';
+import type { AchievementDefinition } from './types/achievements';
 
 export default function Summary() {
   const router = useRouter();
@@ -13,6 +16,9 @@ export default function Summary() {
   }>();
 
   const [streaks, setStreaks] = useState<Streaks | null>(null);
+  const [celebrationQueue, setCelebrationQueue] = useState<AchievementDefinition[]>([]);
+  const [currentCelebration, setCurrentCelebration] = useState<AchievementDefinition | null>(null);
+  const hasCheckedAchievements = useRef(false);
 
   useEffect(() => {
     // Load streaks data
@@ -22,6 +28,46 @@ export default function Summary() {
         console.error('Failed to load streaks:', error);
       });
   }, []);
+
+  useEffect(() => {
+    if (!streaks || hasCheckedAchievements.current) {
+      return;
+    }
+    hasCheckedAchievements.current = true;
+    runAchievementCheck(streaks);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [streaks]);
+
+  useEffect(() => {
+    if (currentCelebration || celebrationQueue.length === 0) {
+      return;
+    }
+    const [next, ...rest] = celebrationQueue;
+    setCurrentCelebration(next);
+    setCelebrationQueue(rest);
+  }, [celebrationQueue, currentCelebration]);
+
+  const runAchievementCheck = async (streakData: Streaks) => {
+    try {
+      const unlocks = await checkAndUnlockAchievements({
+        type: 'session_complete',
+        metadata: {
+          totalSessions: streakData.totalDays,
+          currentStreak: streakData.currentStreak,
+        },
+      });
+
+      if (unlocks.length > 0) {
+        setCelebrationQueue((prev) => [...prev, ...unlocks]);
+      }
+    } catch (error) {
+      console.error('Failed to check achievements:', error);
+    }
+  };
+
+  const handleDismissCelebration = () => {
+    setCurrentCelebration(null);
+  };
 
   // Format duration from seconds to MM:SS
   const formatDuration = (seconds: number): string => {
@@ -85,6 +131,12 @@ export default function Summary() {
       <Pressable style={styles.button} onPress={() => router.push('/')}>
         <Text style={styles.buttonText}>Back to Home</Text>
       </Pressable>
+      {currentCelebration && (
+        <AchievementCelebration
+          achievement={currentCelebration}
+          onDismiss={handleDismissCelebration}
+        />
+      )}
     </View>
   );
 }
