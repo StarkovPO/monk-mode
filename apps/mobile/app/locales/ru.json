@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "__APP_NAME__": "Monk Mode",
+  "home": {
+    "welcome": "Добро пожаловать в медитацию",
+    "subtitle": "Найдите свой внутренний покой",
+    "startMeditation": "Начать Медитацию",
+    "startTimer": "Запустить Таймер",
+    "lessons": "Уроки",
+    "activity": "Моя Активность",
+    "preset": "Пресеты"
+  }
+}

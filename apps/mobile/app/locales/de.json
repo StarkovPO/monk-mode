@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "__APP_NAME__": "Monk Mode",
+  "home": {
+    "welcome": "Willkommen zur Meditation",
+    "subtitle": "Finden Sie Ihren inneren Frieden",
+    "startMeditation": "Meditation Beginnen",
+    "startTimer": "Timer Starten",
+    "lessons": "Lektionen",
+    "activity": "Meine Aktivität",
+    "preset": "Voreinstellungen"
+  }
+}
