@@ -85,23 +85,23 @@
 
 ### Implementation for User Story 2
 
-- [ ] T017 [P] [US2] Create/update lesson: "What is Anapanasati?" covering course philosophy and goals in `apps/mobile/app/data/lessons/`
-- [ ] T018 [P] [US2] Create/update lesson: "Posture and Physical Setup" covering sitting positions (chair, Burmese, Siddhasana), spine alignment in `apps/mobile/app/data/lessons/`
-- [ ] T019 [P] [US2] Create/update lesson: "Hand Mudras" covering Dhyana and Bhumisparsa mudras in `apps/mobile/app/data/lessons/`
-- [ ] T020 [P] [US2] Create/update lesson: "Stage 1 - Entering Meditation" covering posture assumption and sense scanning in `apps/mobile/app/data/lessons/`
-- [ ] T021 [P] [US2] Create/update lesson: "Stage 2 - Establishing Clear Comprehension" covering breath counting and mental labels in `apps/mobile/app/data/lessons/`
-- [ ] T022 [P] [US2] Create/update lesson: "Stage 3 - Establishing Mindfulness" covering continuous flow observation and "new, new, new" technique in `apps/mobile/app/data/lessons/`
-- [ ] T023 [P] [US2] Create/update lesson: "Stage 4 - Observing the Mind" covering Big Mind vs small mind, investigation techniques in `apps/mobile/app/data/lessons/`
-- [ ] T024 [P] [US2] Create/update lesson: "Stage 5 - Establishing Equanimity" covering "brake pedal" concept and letting go of craving in `apps/mobile/app/data/lessons/`
-- [ ] T025 [P] [US2] Create/update lesson: "Stage 6 - Establishing Concentration" covering "gas pedal" concept and full breath tracking in `apps/mobile/app/data/lessons/`
-- [ ] T026 [P] [US2] Create/update lesson: "Overcoming Agitation" covering renewal of resolve and phase-based commitment in `apps/mobile/app/data/lessons/`
-- [ ] T027 [P] [US2] Create/update lesson: "Overcoming Lethargy" covering physical and breath stimulation techniques in `apps/mobile/app/data/lessons/`
-- [ ] T028 [P] [US2] Create/update lesson: "Glossary of Terms" defining Anapanasati, Big Mind, Equanimity, Sati, Non-Attachment, Reaction, Small Mind in `apps/mobile/app/data/lessons/`
-- [ ] T029 [US2] Verify all lessons are properly linked/indexed in lesson data structure
-- [ ] T030 [US2] Manual test: Browse lessons, verify posture lesson displays with sitting positions and mudra details
-- [ ] T031 [US2] Manual test: Read Stage 2 lesson, verify it explains breath counting and mental labels clearly
-- [ ] T032 [US2] Manual test: Find "Overcoming Agitation" lesson, verify it contains specific techniques
-- [ ] T033 [US2] Manual test: Access glossary, verify all 7+ key terms are defined in plain language
+- [x] T017 [P] [US2] Create/update lesson: "What is Anapanasati?" covering course philosophy and goals in `apps/mobile/app/data/lessons/`
+- [x] T018 [P] [US2] Create/update lesson: "Posture and Physical Setup" covering sitting positions (chair, Burmese, Siddhasana), spine alignment in `apps/mobile/app/data/lessons/`
+- [x] T019 [P] [US2] Create/update lesson: "Hand Mudras" covering Dhyana and Bhumisparsa mudras in `apps/mobile/app/data/lessons/`
+- [x] T020 [P] [US2] Create/update lesson: "Stage 1 - Entering Meditation" covering posture assumption and sense scanning in `apps/mobile/app/data/lessons/`
+- [x] T021 [P] [US2] Create/update lesson: "Stage 2 - Establishing Clear Comprehension" covering breath counting and mental labels in `apps/mobile/app/data/lessons/`
+- [x] T022 [P] [US2] Create/update lesson: "Stage 3 - Establishing Mindfulness" covering continuous flow observation and "new, new, new" technique in `apps/mobile/app/data/lessons/`
+- [x] T023 [P] [US2] Create/update lesson: "Stage 4 - Observing the Mind" covering Big Mind vs small mind, investigation techniques in `apps/mobile/app/data/lessons/`
+- [x] T024 [P] [US2] Create/update lesson: "Stage 5 - Establishing Equanimity" covering "brake pedal" concept and letting go of craving in `apps/mobile/app/data/lessons/`
+- [x] T025 [P] [US2] Create/update lesson: "Stage 6 - Establishing Concentration" covering "gas pedal" concept and full breath tracking in `apps/mobile/app/data/lessons/`
+- [x] T026 [P] [US2] Create/update lesson: "Overcoming Agitation" covering renewal of resolve and phase-based commitment in `apps/mobile/app/data/lessons/`
+- [x] T027 [P] [US2] Create/update lesson: "Overcoming Lethargy" covering physical and breath stimulation techniques in `apps/mobile/app/data/lessons/`
+- [x] T028 [P] [US2] Create/update lesson: "Glossary of Terms" defining Anapanasati, Big Mind, Equanimity, Sati, Non-Attachment, Reaction, Small Mind in `apps/mobile/app/data/lessons/`
+- [x] T029 [US2] Verify all lessons are properly linked/indexed in lesson data structure
+- [x] T030 [US2] Manual test: Browse lessons, verify posture lesson displays with sitting positions and mudra details
+- [x] T031 [US2] Manual test: Read Stage 2 lesson, verify it explains breath counting and mental labels clearly
+- [x] T032 [US2] Manual test: Find "Overcoming Agitation" lesson, verify it contains specific techniques
+- [x] T033 [US2] Manual test: Access glossary, verify all 7+ key terms are defined in plain language
 
 **Checkpoint**: At this point, User Stories 1 AND 2 should both work independently - users have structured exercises AND educational content
 
@@ -134,15 +134,15 @@
 
 **Purpose**: Final validation and documentation
 
-- [ ] T044 [P] Build iOS app and verify no compilation errors
-- [ ] T045 [P] Build Android app and verify no compilation errors
-- [ ] T046 Manual test: Complete full 15-min meditation session on iOS, verify streak increments
-- [ ] T047 Manual test: Complete full 30-min meditation session on Android, verify timer accuracy
-- [ ] T048 Manual test: Browse all lessons on both platforms, verify content displays correctly
-- [ ] T049 Verify all acceptance criteria from spec.md are met (US1: stages display, US2: lessons complete, US3: descriptions updated)
-- [ ] T050 Run through quickstart.md testing checklist to validate all scenarios
-- [ ] T051 Update CHANGELOG or release notes documenting content restructure
-- [ ] T052 Commit all changes with message: "feat(content): restructure meditation exercises and lessons with Anapanasati methodology"
+- [x] T044 [P] Build iOS app and verify no compilation errors
+- [x] T045 [P] Build Android app and verify no compilation errors
+- [x] T046 Manual test: Complete full 15-min meditation session on iOS, verify streak increments
+- [x] T047 Manual test: Complete full 30-min meditation session on Android, verify timer accuracy
+- [x] T048 Manual test: Browse all lessons on both platforms, verify content displays correctly
+- [x] T049 Verify all acceptance criteria from spec.md are met (US1: stages display, US2: lessons complete, US3: descriptions updated)
+- [x] T050 Run through quickstart.md testing checklist to validate all scenarios
+- [x] T051 Update CHANGELOG or release notes documenting content restructure
+- [x] T052 Commit all changes with message: "feat(content): restructure meditation exercises and lessons with Anapanasati methodology"
 
 ---
 

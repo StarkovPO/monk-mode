@@ -2,17 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, Pressable, ScrollView } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Link, useRouter } from 'expo-router';
-
-const lessons = [
-  { id: '1', title: 'Introduction to Meditation', summary: 'Learn the basics' },
-  { id: '2', title: 'Breath Awareness', summary: 'Focus on your breathing' },
-  { id: '3', title: 'Body Scan', summary: 'Progressive relaxation' },
-  { id: '4', title: 'Loving Kindness', summary: 'Cultivate compassion' },
-  { id: '5', title: 'Mindful Walking', summary: 'Meditation in motion' },
-  { id: '6', title: 'Visualization', summary: 'Use your imagination' },
-  { id: '7', title: 'Sound Meditation', summary: 'Listen deeply' },
-  { id: '8', title: 'Open Awareness', summary: 'Pure presence' },
-];
+import { lessons } from '../data/lessons';
 
 export default function Lessons() {
   const router = useRouter();
