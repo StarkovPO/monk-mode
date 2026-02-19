@@ -1,72 +1,72 @@
 export interface MeditationStage {
-  name: string;
-  durationRange: string;
-  technique: string;
+  nameKey: string;
+  durationRangeKey: string;
+  techniqueKey: string;
   order: number;
 }
 
 export interface Exercise {
   id: string;
-  name: string;
+  nameKey: string;
   durationSec: number;
-  reminderText: string;
+  reminderTextKey: string;
   stages?: MeditationStage[];
   blockLevel?: 'basic' | 'intermediate' | 'advanced';
-  description?: string;
+  descriptionKey?: string;
 }
 
 export const exercises: Exercise[] = [
   // Beginner Level - 15 minutes total (3 exercises of 5 min each)
   {
     id: 'entering-meditation',
-    name: 'Entering Meditation',
+    nameKey: 'exercises.enteringMeditation.name',
     durationSec: 120, // 2 minutes
-    reminderText: 'Close your eyes, straighten your spine, and scan your six senses.',
+    reminderTextKey: 'exercises.enteringMeditation.reminder',
     blockLevel: 'basic',
-    description: 'Transition into meditation by slowing down, scanning senses, and letting go of past and future.',
+    descriptionKey: 'exercises.enteringMeditation.description',
     stages: [
       {
-        name: 'Scanning the Six Senses',
-        durationRange: '1-2 minutes',
-        technique: 'Observe sight (colors behind eyelids), hearing (sounds or silence), smell/taste, touch (pressure, temperature), and mind (thoughts, emotions). No verbalization, just observe.',
+        nameKey: 'exercises.enteringMeditation.stages.scanning.name',
+        durationRangeKey: 'exercises.enteringMeditation.stages.scanning.duration',
+        techniqueKey: 'exercises.enteringMeditation.stages.scanning.technique',
         order: 1,
       },
     ],
   },
   {
     id: 'breath-counting',
-    name: 'Breath Counting',
+    nameKey: 'exercises.breathCounting.name',
     durationSec: 420, // 7 minutes
-    reminderText: 'Count breath cycles: 1-10, 9-2, 3-8, 7-4, 5-6, end on 5.',
+    reminderTextKey: 'exercises.breathCounting.reminder',
     blockLevel: 'basic',
-    description: 'Stabilize attention using structured counting sequences.',
+    descriptionKey: 'exercises.breathCounting.description',
     stages: [
       {
-        name: 'Counting Sequence',
-        durationRange: '5-7 minutes',
-        technique: 'Count: 1→10, 9→2, 3→8, 7→4, 5→6, end on 5. If distracted for >2 seconds, restart from 1. This anchors awareness to the breath.',
+        nameKey: 'exercises.breathCounting.stages.counting.name',
+        durationRangeKey: 'exercises.breathCounting.stages.counting.duration',
+        techniqueKey: 'exercises.breathCounting.stages.counting.technique',
         order: 1,
       },
     ],
   },
   {
     id: 'clear-comprehension',
-    name: 'Establishing Clear Comprehension',
+    nameKey: 'exercises.clearComprehension.name',
     durationSec: 378, // 6.3 minutes (total 15 min)
-    reminderText: 'Label "In/Out", then transition to wordless awareness of breath.',
+    reminderTextKey: 'exercises.clearComprehension.reminder',
     blockLevel: 'basic',
-    description: 'Move from counting to labeling to pure awareness of breath sensations.',
+    descriptionKey: 'exercises.clearComprehension.description',
     stages: [
       {
-        name: 'Mental Labeling',
-        durationRange: '3-4 minutes',
-        technique: 'Mentally label "In" during inhalation, "Out" during exhalation. Keep attention on the breath.',
+        nameKey: 'exercises.clearComprehension.stages.labeling.name',
+        durationRangeKey: 'exercises.clearComprehension.stages.labeling.duration',
+        techniqueKey: 'exercises.clearComprehension.stages.labeling.technique',
         order: 1,
       },
       {
-        name: 'Wordless Awareness',
-        durationRange: '2-3 minutes',
-        technique: 'Drop all words. Simply feel the sensations of air passing through the nostrils with clear, silent awareness.',
+        nameKey: 'exercises.clearComprehension.stages.wordless.name',
+        durationRangeKey: 'exercises.clearComprehension.stages.wordless.duration',
+        techniqueKey: 'exercises.clearComprehension.stages.wordless.technique',
         order: 2,
       },
     ],
@@ -75,80 +75,80 @@ export const exercises: Exercise[] = [
   // Intermediate Level - 30 minutes total
   {
     id: 'entering-intermediate',
-    name: 'Entering Meditation',
+    nameKey: 'exercises.enteringIntermediate.name',
     durationSec: 120, // 2 minutes
-    reminderText: 'Scan your senses and settle into the present moment.',
+    reminderTextKey: 'exercises.enteringIntermediate.reminder',
     blockLevel: 'intermediate',
-    description: 'Begin practice with sensory awareness and letting go.',
+    descriptionKey: 'exercises.enteringIntermediate.description',
     stages: [
       {
-        name: 'Scanning and Settling',
-        durationRange: '1-2 minutes',
-        technique: 'Scan the six senses, identify your current mood (agitated/lethargic/neutral), and let go of past and future.',
+        nameKey: 'exercises.enteringIntermediate.stages.settling.name',
+        durationRangeKey: 'exercises.enteringIntermediate.stages.settling.duration',
+        techniqueKey: 'exercises.enteringIntermediate.stages.settling.technique',
         order: 1,
       },
     ],
   },
   {
     id: 'counting-intermediate',
-    name: 'Breath Counting',
+    nameKey: 'exercises.countingIntermediate.name',
     durationSec: 480, // 8 minutes
-    reminderText: 'Count breath sequences with full attention.',
+    reminderTextKey: 'exercises.countingIntermediate.reminder',
     blockLevel: 'intermediate',
-    description: 'Stabilize mind through counting and tracking breath phases.',
+    descriptionKey: 'exercises.countingIntermediate.description',
     stages: [
       {
-        name: 'Structured Counting',
-        durationRange: '6-8 minutes',
-        technique: 'Count sequences: 1→10, 9→2, 3→8, 7→4, 5→6. Track each phase: inhale, pause, exhale, pause.',
+        nameKey: 'exercises.countingIntermediate.stages.structured.name',
+        durationRangeKey: 'exercises.countingIntermediate.stages.structured.duration',
+        techniqueKey: 'exercises.countingIntermediate.stages.structured.technique',
         order: 1,
       },
     ],
   },
   {
     id: 'comprehension-intermediate',
-    name: 'Clear Comprehension',
+    nameKey: 'exercises.comprehensionIntermediate.name',
     durationSec: 420, // 7 minutes
-    reminderText: 'Label breaths, then observe in silence.',
+    reminderTextKey: 'exercises.comprehensionIntermediate.reminder',
     blockLevel: 'intermediate',
-    description: 'Deepen awareness through labeling and wordless observation.',
+    descriptionKey: 'exercises.comprehensionIntermediate.description',
     stages: [
       {
-        name: 'Labeling and Silent Observation',
-        durationRange: '5-7 minutes',
-        technique: 'Label "In/Out" for a few minutes, then drop words and observe breath sensations with clear awareness.',
+        nameKey: 'exercises.comprehensionIntermediate.stages.labelingSilent.name',
+        durationRangeKey: 'exercises.comprehensionIntermediate.stages.labelingSilent.duration',
+        techniqueKey: 'exercises.comprehensionIntermediate.stages.labelingSilent.technique',
         order: 1,
       },
     ],
   },
   {
     id: 'mindfulness-flow',
-    name: 'Establishing Mindfulness',
+    nameKey: 'exercises.mindfulnessFlow.name',
     durationSec: 420, // 7 minutes
-    reminderText: 'Perceive experience as a continuous flow - "new, new, new".',
+    reminderTextKey: 'exercises.mindfulnessFlow.reminder',
     blockLevel: 'intermediate',
-    description: 'Establish awareness "in front of you" - meet each moment as it arrives.',
+    descriptionKey: 'exercises.mindfulnessFlow.description',
     stages: [
       {
-        name: 'Continuous Flow Awareness',
-        durationRange: '5-7 minutes',
-        technique: 'Experience is like a conveyor belt. Meet each sensation (breath, thought, itch) as it arrives, then let it go. Don\'t look back or lean forward. "New, new, new".',
+        nameKey: 'exercises.mindfulnessFlow.stages.continuousFlow.name',
+        durationRangeKey: 'exercises.mindfulnessFlow.stages.continuousFlow.duration',
+        techniqueKey: 'exercises.mindfulnessFlow.stages.continuousFlow.technique',
         order: 1,
       },
     ],
   },
   {
     id: 'observing-reactions',
-    name: 'Observing the Mind',
+    nameKey: 'exercises.observingReactions.name',
     durationSec: 360, // 6 minutes (total 30 min)
-    reminderText: 'Work with strong reactions using Big Mind perspective.',
+    reminderTextKey: 'exercises.observingReactions.reminder',
     blockLevel: 'intermediate',
-    description: 'Investigate and purify strong mental reactions.',
+    descriptionKey: 'exercises.observingReactions.description',
     stages: [
       {
-        name: 'Working with Reactions',
-        durationRange: '5-6 minutes',
-        technique: 'If strong reactions arise (anger, obsession, pain), distance yourself (Big Mind), investigate with labels ("this is not me", "this is impermanent"), direct loving-kindness if needed.',
+        nameKey: 'exercises.observingReactions.stages.workingReactions.name',
+        durationRangeKey: 'exercises.observingReactions.stages.workingReactions.duration',
+        techniqueKey: 'exercises.observingReactions.stages.workingReactions.technique',
         order: 1,
       },
     ],
@@ -157,112 +157,112 @@ export const exercises: Exercise[] = [
   // Advanced Level - 60 minutes total
   {
     id: 'entering-advanced',
-    name: 'Entering Meditation',
+    nameKey: 'exercises.enteringAdvanced.name',
     durationSec: 180, // 3 minutes
-    reminderText: 'Deep sensory scan and complete letting go.',
+    reminderTextKey: 'exercises.enteringAdvanced.reminder',
     blockLevel: 'advanced',
-    description: 'Thorough entry into meditation with full awareness.',
+    descriptionKey: 'exercises.enteringAdvanced.description',
     stages: [
       {
-        name: 'Complete Entry Sequence',
-        durationRange: '2-3 minutes',
-        technique: 'Scan all six senses thoroughly. Investigate mood and tension. Explicitly declare meditation as your most important task. Let go completely.',
+        nameKey: 'exercises.enteringAdvanced.stages.completeEntry.name',
+        durationRangeKey: 'exercises.enteringAdvanced.stages.completeEntry.duration',
+        techniqueKey: 'exercises.enteringAdvanced.stages.completeEntry.technique',
         order: 1,
       },
     ],
   },
   {
     id: 'counting-advanced',
-    name: 'Breath Counting',
+    nameKey: 'exercises.countingAdvanced.name',
     durationSec: 540, // 9 minutes
-    reminderText: 'Precise counting with full cycle tracking.',
+    reminderTextKey: 'exercises.countingAdvanced.reminder',
     blockLevel: 'advanced',
-    description: 'Deep stabilization through extended counting practice.',
+    descriptionKey: 'exercises.countingAdvanced.description',
     stages: [
       {
-        name: 'Extended Counting Practice',
-        durationRange: '8-9 minutes',
-        technique: 'Count all sequences with precision. Track every phase of each breath. Restart if distracted >2 seconds. Build unshakeable stability.',
+        nameKey: 'exercises.countingAdvanced.stages.extendedCounting.name',
+        durationRangeKey: 'exercises.countingAdvanced.stages.extendedCounting.duration',
+        techniqueKey: 'exercises.countingAdvanced.stages.extendedCounting.technique',
         order: 1,
       },
     ],
   },
   {
     id: 'comprehension-advanced',
-    name: 'Clear Comprehension',
+    nameKey: 'exercises.comprehensionAdvanced.name',
     durationSec: 540, // 9 minutes
-    reminderText: 'From labeling to pure wordless awareness.',
+    reminderTextKey: 'exercises.comprehensionAdvanced.reminder',
     blockLevel: 'advanced',
-    description: 'Establish crystal-clear awareness of breath.',
+    descriptionKey: 'exercises.comprehensionAdvanced.description',
     stages: [
       {
-        name: 'Deep Clear Comprehension',
-        durationRange: '8-9 minutes',
-        technique: 'Label "In/Out" until stable, then transition to wordless awareness. Feel every subtle sensation of air moving through nostrils.',
+        nameKey: 'exercises.comprehensionAdvanced.stages.deepComprehension.name',
+        durationRangeKey: 'exercises.comprehensionAdvanced.stages.deepComprehension.duration',
+        techniqueKey: 'exercises.comprehensionAdvanced.stages.deepComprehension.technique',
         order: 1,
       },
     ],
   },
   {
     id: 'mindfulness-advanced',
-    name: 'Establishing Mindfulness',
+    nameKey: 'exercises.mindfulnessAdvanced.name',
     durationSec: 540, // 9 minutes
-    reminderText: 'Second-by-second tracking of experience flow.',
+    reminderTextKey: 'exercises.mindfulnessAdvanced.reminder',
     blockLevel: 'advanced',
-    description: 'Perfect synchronicity with the present moment.',
+    descriptionKey: 'exercises.mindfulnessAdvanced.description',
     stages: [
       {
-        name: 'Perfect Present Awareness',
-        durationRange: '8-9 minutes',
-        technique: 'Track experience second-by-second. Meet each moment exactly as it arrives on the "conveyor belt". Clarity, synchronicity, panoramicity.',
+        nameKey: 'exercises.mindfulnessAdvanced.stages.perfectPresent.name',
+        durationRangeKey: 'exercises.mindfulnessAdvanced.stages.perfectPresent.duration',
+        techniqueKey: 'exercises.mindfulnessAdvanced.stages.perfectPresent.technique',
         order: 1,
       },
     ],
   },
   {
     id: 'observing-advanced',
-    name: 'Observing the Mind',
+    nameKey: 'exercises.observingAdvanced.name',
     durationSec: 540, // 9 minutes
-    reminderText: 'Purify hindrances with investigation.',
+    reminderTextKey: 'exercises.observingAdvanced.reminder',
     blockLevel: 'advanced',
-    description: 'Deep purification of mental patterns.',
+    descriptionKey: 'exercises.observingAdvanced.description',
     stages: [
       {
-        name: 'Deep Investigation',
-        durationRange: '8-9 minutes',
-        technique: 'Use Big Mind to observe small mind. Investigate reactions thoroughly. Apply loving-kindness. Purify strong hindrances.',
+        nameKey: 'exercises.observingAdvanced.stages.deepInvestigation.name',
+        durationRangeKey: 'exercises.observingAdvanced.stages.deepInvestigation.duration',
+        techniqueKey: 'exercises.observingAdvanced.stages.deepInvestigation.technique',
         order: 1,
       },
     ],
   },
   {
     id: 'equanimity-advanced',
-    name: 'Establishing Equanimity',
+    nameKey: 'exercises.equanimityAdvanced.name',
     durationSec: 600, // 10 minutes
-    reminderText: 'Press the "brake pedal" - let go of craving.',
+    reminderTextKey: 'exercises.equanimityAdvanced.reminder',
     blockLevel: 'advanced',
-    description: 'Release all craving and rest in peace.',
+    descriptionKey: 'exercises.equanimityAdvanced.description',
     stages: [
       {
-        name: 'Brake Pedal - Letting Go',
-        durationRange: '9-10 minutes',
-        technique: 'Let go of any craving away from the breath. Enjoy the peace, richness, and self-sufficiency of this moment. No grasping, no pushing away.',
+        nameKey: 'exercises.equanimityAdvanced.stages.brakePedal.name',
+        durationRangeKey: 'exercises.equanimityAdvanced.stages.brakePedal.duration',
+        techniqueKey: 'exercises.equanimityAdvanced.stages.brakePedal.technique',
         order: 1,
       },
     ],
   },
   {
     id: 'concentration-advanced',
-    name: 'Establishing Concentration',
+    nameKey: 'exercises.concentrationAdvanced.name',
     durationSec: 660, // 11 minutes (total 60 min)
-    reminderText: 'Press the "gas pedal" - gather mind fully on breath.',
+    reminderTextKey: 'exercises.concentrationAdvanced.reminder',
     blockLevel: 'advanced',
-    description: 'Deep concentration with complete breath tracking.',
+    descriptionKey: 'exercises.concentrationAdvanced.description',
     stages: [
       {
-        name: 'Gas Pedal - Full Gathering',
-        durationRange: '10-11 minutes',
-        technique: 'Softly press the "gas pedal". Mind gathers completely around the breath. Track each inhale, pause, exhale, pause without any gaps or distractions.',
+        nameKey: 'exercises.concentrationAdvanced.stages.gasPedal.name',
+        durationRangeKey: 'exercises.concentrationAdvanced.stages.gasPedal.duration',
+        techniqueKey: 'exercises.concentrationAdvanced.stages.gasPedal.technique',
         order: 1,
       },
     ],

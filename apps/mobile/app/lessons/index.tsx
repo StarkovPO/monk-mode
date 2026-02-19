@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, Pressable, ScrollView } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Link, useRouter } from 'expo-router';
 import { lessons } from '../data/lessons';
+import { t } from '../services/i18n';
 
 export default function Lessons() {
   const router = useRouter();
@@ -13,8 +14,8 @@ export default function Lessons() {
         {lessons.map((lesson) => (
           <Link key={lesson.id} href={`/lessons/${lesson.id}`} asChild>
             <Pressable style={styles.lessonCard}>
-              <Text style={styles.lessonTitle}>{lesson.title}</Text>
-              <Text style={styles.lessonSummary}>{lesson.summary}</Text>
+              <Text style={styles.lessonTitle}>{t(lesson.titleKey)}</Text>
+              <Text style={styles.lessonSummary}>{t(lesson.summaryKey)}</Text>
             </Pressable>
           </Link>
         ))}

@@ -9,5 +9,268 @@
     "lessons": "Lessons",
     "activity": "My Activity",
     "preset": "Presets"
+  },
+  "presets": {
+    "beginner": {
+      "label": "Beginner",
+      "description": "15-Minute Block (Basic Level or Express Practice) • 3 exercises"
+    },
+    "experienced": {
+      "label": "Experienced",
+      "description": "30-Minute Block (Confident Practice / Intermediate Level) • 5 exercises"
+    },
+    "advanced": {
+      "label": "Advanced",
+      "description": "60-Minute Block (Deep Dive / Advanced Level) • 7 exercises"
+    }
+  },
+  "exercises": {
+    "enteringMeditation": {
+      "name": "Entering Meditation",
+      "reminder": "Close your eyes, straighten your spine, and scan your six senses.",
+      "description": "Transition into meditation by slowing down, scanning senses, and letting go of past and future.",
+      "stages": {
+        "scanning": {
+          "name": "Scanning the Six Senses",
+          "duration": "1-2 minutes",
+          "technique": "Observe sight (colors behind eyelids), hearing (sounds or silence), smell/taste, touch (pressure, temperature), and mind (thoughts, emotions). No verbalization, just observe."
+        }
+      }
+    },
+    "breathCounting": {
+      "name": "Breath Counting",
+      "reminder": "Count breath cycles: 1-10, 9-2, 3-8, 7-4, 5-6, end on 5.",
+      "description": "Stabilize attention using structured counting sequences.",
+      "stages": {
+        "counting": {
+          "name": "Counting Sequence",
+          "duration": "5-7 minutes",
+          "technique": "Count: 1→10, 9→2, 3→8, 7→4, 5→6, end on 5. If distracted for >2 seconds, restart from 1. This anchors awareness to the breath."
+        }
+      }
+    },
+    "clearComprehension": {
+      "name": "Establishing Clear Comprehension",
+      "reminder": "Label \"In/Out\", then transition to wordless awareness of breath.",
+      "description": "Move from counting to labeling to pure awareness of breath sensations.",
+      "stages": {
+        "labeling": {
+          "name": "Mental Labeling",
+          "duration": "3-4 minutes",
+          "technique": "Mentally label \"In\" during inhalation, \"Out\" during exhalation. Keep attention on the breath."
+        },
+        "wordless": {
+          "name": "Wordless Awareness",
+          "duration": "2-3 minutes",
+          "technique": "Drop all words. Simply feel the sensations of air passing through the nostrils with clear, silent awareness."
+        }
+      }
+    },
+    "enteringIntermediate": {
+      "name": "Entering Meditation",
+      "reminder": "Scan your senses and settle into the present moment.",
+      "description": "Begin practice with sensory awareness and letting go.",
+      "stages": {
+        "settling": {
+          "name": "Scanning and Settling",
+          "duration": "1-2 minutes",
+          "technique": "Scan the six senses, identify your current mood (agitated/lethargic/neutral), and let go of past and future."
+        }
+      }
+    },
+    "countingIntermediate": {
+      "name": "Breath Counting",
+      "reminder": "Count breath sequences with full attention.",
+      "description": "Stabilize mind through counting and tracking breath phases.",
+      "stages": {
+        "structured": {
+          "name": "Structured Counting",
+          "duration": "6-8 minutes",
+          "technique": "Count sequences: 1→10, 9→2, 3→8, 7→4, 5→6. Track each phase: inhale, pause, exhale, pause."
+        }
+      }
+    },
+    "comprehensionIntermediate": {
+      "name": "Clear Comprehension",
+      "reminder": "Label breaths, then observe in silence.",
+      "description": "Deepen awareness through labeling and wordless observation.",
+      "stages": {
+        "labelingSilent": {
+          "name": "Labeling and Silent Observation",
+          "duration": "5-7 minutes",
+          "technique": "Label \"In/Out\" for a few minutes, then drop words and observe breath sensations with clear awareness."
+        }
+      }
+    },
+    "mindfulnessFlow": {
+      "name": "Establishing Mindfulness",
+      "reminder": "Perceive experience as a continuous flow - \"new, new, new\".",
+      "description": "Establish awareness \"in front of you\" - meet each moment as it arrives.",
+      "stages": {
+        "continuousFlow": {
+          "name": "Continuous Flow Awareness",
+          "duration": "5-7 minutes",
+          "technique": "Experience is like a conveyor belt. Meet each sensation (breath, thought, itch) as it arrives, then let it go. Don't look back or lean forward. \"New, new, new\"."
+        }
+      }
+    },
+    "observingReactions": {
+      "name": "Observing the Mind",
+      "reminder": "Work with strong reactions using Big Mind perspective.",
+      "description": "Investigate and purify strong mental reactions.",
+      "stages": {
+        "workingReactions": {
+          "name": "Working with Reactions",
+          "duration": "5-6 minutes",
+          "technique": "If strong reactions arise (anger, obsession, pain), distance yourself (Big Mind), investigate with labels (\"this is not me\", \"this is impermanent\"), direct loving-kindness if needed."
+        }
+      }
+    },
+    "enteringAdvanced": {
+      "name": "Entering Meditation",
+      "reminder": "Deep sensory scan and complete letting go.",
+      "description": "Thorough entry into meditation with full awareness.",
+      "stages": {
+        "completeEntry": {
+          "name": "Complete Entry Sequence",
+          "duration": "2-3 minutes",
+          "technique": "Scan all six senses thoroughly. Investigate mood and tension. Explicitly declare meditation as your most important task. Let go completely."
+        }
+      }
+    },
+    "countingAdvanced": {
+      "name": "Breath Counting",
+      "reminder": "Precise counting with full cycle tracking.",
+      "description": "Deep stabilization through extended counting practice.",
+      "stages": {
+        "extendedCounting": {
+          "name": "Extended Counting Practice",
+          "duration": "8-9 minutes",
+          "technique": "Count all sequences with precision. Track every phase of each breath. Restart if distracted >2 seconds. Build unshakeable stability."
+        }
+      }
+    },
+    "comprehensionAdvanced": {
+      "name": "Clear Comprehension",
+      "reminder": "From labeling to pure wordless awareness.",
+      "description": "Establish crystal-clear awareness of breath.",
+      "stages": {
+        "deepComprehension": {
+          "name": "Deep Clear Comprehension",
+          "duration": "8-9 minutes",
+          "technique": "Label \"In/Out\" until stable, then transition to wordless awareness. Feel every subtle sensation of air moving through nostrils."
+        }
+      }
+    },
+    "mindfulnessAdvanced": {
+      "name": "Establishing Mindfulness",
+      "reminder": "Second-by-second tracking of experience flow.",
+      "description": "Perfect synchronicity with the present moment.",
+      "stages": {
+        "perfectPresent": {
+          "name": "Perfect Present Awareness",
+          "duration": "8-9 minutes",
+          "technique": "Track experience second-by-second. Meet each moment exactly as it arrives on the \"conveyor belt\". Clarity, synchronicity, panoramicity."
+        }
+      }
+    },
+    "observingAdvanced": {
+      "name": "Observing the Mind",
+      "reminder": "Purify hindrances with investigation.",
+      "description": "Deep purification of mental patterns.",
+      "stages": {
+        "deepInvestigation": {
+          "name": "Deep Investigation",
+          "duration": "8-9 minutes",
+          "technique": "Use Big Mind to observe small mind. Investigate reactions thoroughly. Apply loving-kindness. Purify strong hindrances."
+        }
+      }
+    },
+    "equanimityAdvanced": {
+      "name": "Establishing Equanimity",
+      "reminder": "Press the \"brake pedal\" - let go of craving.",
+      "description": "Release all craving and rest in peace.",
+      "stages": {
+        "brakePedal": {
+          "name": "Brake Pedal - Letting Go",
+          "duration": "9-10 minutes",
+          "technique": "Let go of any craving away from the breath. Enjoy the peace, richness, and self-sufficiency of this moment. No grasping, no pushing away."
+        }
+      }
+    },
+    "concentrationAdvanced": {
+      "name": "Establishing Concentration",
+      "reminder": "Press the \"gas pedal\" - gather mind fully on breath.",
+      "description": "Deep concentration with complete breath tracking.",
+      "stages": {
+        "gasPedal": {
+          "name": "Gas Pedal - Full Gathering",
+          "duration": "10-11 minutes",
+          "technique": "Softly press the \"gas pedal\". Mind gathers completely around the breath. Track each inhale, pause, exhale, pause without any gaps or distractions."
+        }
+      }
+    }
+  },
+  "lessons": {
+    "anapanasati": {
+      "title": "What is Anapanasati?",
+      "summary": "Course philosophy and objectives",
+      "content": "The \"Direct Contact\" course is a rigorous, 8-week practical program designed to establish a direct link between the practitioner and the present moment. Based on the practice of Anapanasati (Mindfulness of Breathing), the course aims to quiet the intrusive noise of the mind to achieve a state of profound peace and clarity.\n\n## The Central Methodology\n\nThe development of the \"nothing to do\" skill—a deceptively difficult ability to stop following automatic thoughts and reactions. When the internal bustle and habitual restlessness are silenced through intentional slowing down, several \"blessed states\" naturally emerge:\n\n- **Clear Understanding**: A sharp, undistorted perception of reality\n- **Happiness**: A sense of well-being independent of external conditions\n- **Creative Energy**: The revitalization of mental and physical resources\n- **Loving-Kindness**: A natural orientation of care toward oneself and others\n\n## The Two Contracts\n\nSuccess in this course is predicated on two formal internal agreements:\n\n### Daily Practice Contract\n- **Frequency**: Practice every single day for the full 8-week duration\n- **Duration**: Minimum 15 minutes daily\n- **The Makeup Rule**: If a day is missed due to force majeure, perform a double session the following day\n\n### Balance of Effort\nMeditation requires a \"zealous and diligent\" investment of energy into every single second of awareness. Find the narrow path between the \"lazy laxity\" of a slouching posture and the \"excessive tension\" that overstimulates the mind."
+    },
+    "posture": {
+      "title": "Posture",
+      "summary": "Sitting positions, spine alignment",
+      "content": "A stable physical posture provides the physiological foundation for mental alertness. Sitting is the preferred mode, acting as the \"middle way\" between the lethargy of lying down and the distractions of standing.\n\n## Sitting Positions\n\n### Chair (Beginner)\n- **Base**: Feet flat on floor\n- **Legs**: Uncrossed; back away from the backrest\n- **Best for**: Beginners, those with knee/hip issues\n\n### Burmese (Intermediate)\n- **Base**: Meditation pillow (Zafu)\n- **Legs**: Calves parallel on the floor; heels not overlapping\n- **Best for**: Intermediate practitioners\n\n### Siddhasana (Subjective)\n- **Base**: Meditation pillow (Zafu)\n- **Legs**: One heel at the groin; other foot tucked into the overlap\n- **Note**: Often perceived as advanced, but many find it provides superior beauty, symmetry, and stability\n\n## Step-by-Step Alignment\n\n1. **Spine**: Maintain a straight back with a slight natural curve in the lower back (facilitated by sitting on the front edge of the pillow)\n\n2. **Shoulders**: Roll the shoulders back slightly, then relax them downward, allowing the body to \"hang\" from the spinal column\n\n3. **Head**: Imagine a cord pulling the crown upward. Slightly tuck the chin as if gazing at the ground two to three meters away\n\n4. **Eyes**: Closed to internalize the focus"
+    },
+    "mudras": {
+      "title": "Hand Mudras",
+      "summary": "Dhyana and Bhumisparsa mudras explained",
+      "content": "Hand positions (mudras) are symbolic gestures that help focus the mind and embody specific qualities during meditation.\n\n## Dhyana Mudra (Contemplation)\n\n**Position**: Right palm on left palm, thumbs lightly touching to form a triangle\n\n**Symbolism**: Represents the harmony of clarity, peace, and love\n\n**When to use**: During concentration practices, when seeking inner peace and contemplation\n\n**Benefits**:\n- Creates a closed energy circuit\n- Symbolizes the union of wisdom and compassion\n- Helps maintain focus on the breath\n\n## Bhumisparsa Mudra (Calling the Earth)\n\n**Position**: Hands resting on knees, elbows slightly out\n\n**Symbolism**: \"Claiming the earth as witness\" - taking up space without aggression, unfolding the self to its natural scales\n\n**When to use**: When you need grounding, when working with strong emotions, when establishing presence\n\n**Benefits**:\n- Grounds energy downward\n- Opens the chest and shoulders\n- Creates a sense of stability and rootedness\n- Symbolizes being witnessed by the earth itself\n\n## Choosing Your Mudra\n\nBoth mudras are valid for Anapanasati practice. Choose based on:\n- **Dhyana**: When you want to cultivate inner stillness and concentration\n- **Bhumisparsa**: When you need grounding and presence\n\nYou may also alternate between sessions or even within a single session if your needs change."
+    },
+    "stage1": {
+      "title": "Stage 1 - Entering Meditation",
+      "summary": "The 4-step entry: slowing, scanning, investigating, letting go",
+      "content": "## Step 1: Slowing and Posture\n\nClose the eyes, straighten the spine, and consciously decelerate the mind's tempo. Commit to a \"gentle effort of stillness.\"\n\n## Step 2: Scanning\n\nObserve the \"panorama of consciousness\" through the six senses without verbalization. Use the eyes as the starting point:\n\n1. **Sight**: Observe the colors and forms shifting behind closed eyelids\n2. **Hearing**: Sounds or the \"sound of silence\"\n3. **Smell/Taste**: Any present scents or tastes\n4. **Touch**: Pressure of clothing, contact with the floor, or temperature\n5. **Mind**: The movement of thoughts, emotions, or urges\n\n## Step 3: Investigation\n\nAnalyze the dominant \"mood.\" Identify if you are currently agitated, lethargic, or impatient. Locate specific \"islands of tension\" in the body.\n\n## Step 4: Letting Go\n\nExplicitly declare meditation as your \"most important task.\" Drop concerns of the past or future and center attention in the \"center of consciousness\"—the breath.\n\n## Why This Matters\n\nThis entry sequence is not optional. It:\n- Signals to your nervous system that meditation is beginning\n- Helps you assess your starting state\n- Creates a clean break from daily activities\n- Establishes the breath as your anchor point"
+    },
+    "stage2": {
+      "title": "Stage 2 - Establishing Clear Comprehension",
+      "summary": "Breath counting sequences and mental labeling",
+      "content": "This stage utilizes cognitive anchors to stabilize the mind and identify the breath's location in the upper respiratory tract.\n\n## The Counting Sequence\n\nCount in this specific order:\n1. 1 to 10\n2. 9 to 2\n3. 3 to 8\n4. 7 to 4\n5. 5 to 6\n6. End on 5\n\n### Critical Technical Metric\n\nIf awareness is broken for more than 2 seconds by an external or internal distraction, you must restart the count from the very first sequence (1–10).\n\nThis is not punishment—it's training. Each restart strengthens your ability to notice when attention has wandered.\n\n## Labeling Phase\n\nOnce counting is stable, mentally label:\n- **\"In\"** during the inhalation\n- **\"Out\"** during the exhalation\n\nKeep the labels simple and consistent. The words are training wheels for awareness.\n\n## Wordless Awareness\n\nAfter labeling becomes natural, transition into wordless, clear awareness of the sensations of air passing through the nostrils.\n\nFeel:\n- The coolness of the in-breath\n- The warmth of the out-breath\n- The subtle touch of air at the nostrils\n- The natural pause between breaths"
+    },
+    "stage3": {
+      "title": "Stage 3 - Establishing Mindfulness",
+      "summary": "Continuous flow observation and \"new, new, new\" technique",
+      "content": "This step focuses on **Sati**, which literally translates to \"Memory\" or \"Remembering.\" It is the active process of remembering the now without delay.\n\n## The \"In Front of You\" Technique\n\n**Visualization**: Imagine your experience is a stream or conveyor belt passing directly in front of your eyes.\n\nTo establish awareness \"in front of you\" means keeping your mental \"head\" straight:\n- **Don't look back** at what just passed\n- **Don't lean forward** to see what is coming\n- **Meet each sensation** (breath, thought, itch) as it arrives on the \"belt\"\n- **Let it go immediately** after it passes\n\n## The \"New, New, New\" Practice\n\nSilently note to yourself: \"new, new, new\" as each moment arises.\n\nThis reinforces:\n- Each breath is a new breath\n- Each thought is a new thought\n- Each sensation is a new sensation\n\nNothing is carried over from the previous moment. Everything is fresh.\n\n## Three Aspects of Sati\n\n1. **Clarity**: Understanding the current state without confusion\n2. **Synchronicity**: Noticing sensations as they occur, not after\n3. **Panoramicity**: Seeing the whole field of experience, not just one point\n\n## Common Mistakes\n\n- Trying to hold onto pleasant sensations\n- Pushing away unpleasant sensations\n- Getting lost in thoughts about the past or future\n- Analyzing the meditation while meditating"
+    },
+    "stage4": {
+      "title": "Stage 4 - Observing the Mind",
+      "summary": "Big Mind vs small mind, investigation techniques",
+      "content": "For strong internal reactions (anger, obsessive thoughts, or physical pain), apply this three-part investigative strategy.\n\n## Big Mind vs Small Mind\n\n**Small Mind**: The reactive, emotional, story-making part of consciousness that gets caught up in drama\n\n**Big Mind**: The observing awareness that can witness small mind without being swept away\n\n### Shifting to Big Mind\n\nWhen you notice a strong reaction:\n1. **Step back mentally**: Imagine you're watching yourself from above\n2. **Create distance**: \"There is anger\" instead of \"I am angry\"\n3. **Observe without judgment**: Watch the reaction like you'd watch clouds passing\n\n## Investigation Techniques\n\n### Labeling\nApply clear labels to what you observe:\n- \"This is not me\" (the reaction is not your identity)\n- \"This is impermanent\" (it will pass)\n- \"This is just a thought\" (not reality)\n- \"This is just a sensation\" (not a command)\n\n### Inquiry\nAsk yourself:\n- Where in my body do I feel this?\n- What is the actual sensation (heat, tightness, pressure)?\n- What story is my mind telling about this?\n- Is this story true?\n\n### Loving-Kindness Response\n\nIf the reaction is particularly strong or painful:\n1. Place your hand on your heart\n2. Silently say: \"May I be at peace\"\n3. Breathe compassion toward yourself\n4. Remember: This is difficult, and you're doing your best\n\n## When to Use This Stage\n\n- When anger, fear, or sadness arises\n- When obsessive thoughts loop\n- When physical pain demands attention\n- When you feel stuck or contracted\n\nDon't force this stage. If your mind is calm, stay with the breath."
+    },
+    "stage5": {
+      "title": "Stage 5 - Establishing Equanimity",
+      "summary": "The \"brake pedal\" - letting go of craving",
+      "content": "Equanimity is the \"brake pedal\" of meditation—the ability to let go of craving and rest in what is.\n\n## What is Equanimity?\n\n**Not**: Indifference, numbness, or not caring\n**Is**: Balanced acceptance, non-reactivity, inner peace regardless of circumstances\n\nEquanimity means:\n- Not pushing away unpleasant experiences\n- Not grasping at pleasant experiences\n- Resting in the middle, balanced and aware\n\n## The Brake Pedal Technique\n\nImagine your mind has a brake pedal. When you notice yourself:\n- Wanting the meditation to be different\n- Wishing for a better breath\n- Trying to force concentration\n- Resisting what's happening\n\n**Press the brake pedal**: Let go of the craving. Stop trying to get somewhere.\n\n## Practical Application\n\n### When Pleasant Sensations Arise\n- Notice them\n- Enjoy them\n- Don't try to make them stay\n- Let them pass naturally\n\n### When Unpleasant Sensations Arise\n- Notice them\n- Don't try to make them leave\n- Observe with curiosity\n- Let them pass naturally\n\n### When Neutral Sensations Arise\n- Notice them\n- Don't judge them as boring\n- Appreciate the peace of neutrality\n- Let them be\n\n## The Paradox\n\nThe more you let go of wanting meditation to be a certain way, the deeper and more peaceful it becomes.\n\nStop trying to get somewhere. You're already here.\n\n## Signs of Equanimity\n\n- Breath feels effortless\n- Mind is spacious and calm\n- Reactions arise but don't stick\n- Sense of \"everything is okay as it is\"\n- Deep peace and contentment"
+    },
+    "stage6": {
+      "title": "Stage 6 - Establishing Concentration",
+      "summary": "The \"gas pedal\" - gathering mind fully on breath",
+      "content": "Concentration is the \"gas pedal\" of meditation—the ability to gather the mind completely around a single object (the breath).\n\n## What is Concentration?\n\n**Not**: Forcing, straining, or gripping\n**Is**: Gentle, continuous attention that naturally deepens\n\nTrue concentration feels:\n- Effortless (like water flowing downhill)\n- Stable (like a candle flame in a windless room)\n- Bright (clear and vivid awareness)\n- Unified (mind and breath become one)\n\n## The Gas Pedal Technique\n\nAfter establishing equanimity (brake pedal), you can softly press the \"gas pedal\":\n- Gather attention more fully on the breath\n- Track each phase without gaps\n- Let the mind settle into the breath completely\n\n**Important**: This is a soft, gentle pressure. If you force it, you'll create tension and lose equanimity.\n\n## Complete Breath Tracking\n\nTrack every phase of the breath cycle:\n\n1. **Inhale**: Feel the air entering from beginning to end\n2. **Pause**: Notice the natural gap at the top\n3. **Exhale**: Feel the air leaving from beginning to end\n4. **Pause**: Notice the natural gap at the bottom\n\nNo gaps in awareness. The mind stays with the breath continuously.\n\n## Deepening Concentration\n\nAs concentration deepens, you may notice:\n- Breath becomes very subtle and refined\n- Sense of body may fade\n- Time seems to disappear\n- Deep peace and joy arise\n- Mind becomes very bright and clear\n\n## Common Obstacles\n\n**Dullness**: Mind becomes foggy or sleepy\n- Solution: Sit up straighter, open eyes briefly, take a few deep breaths\n\n**Restlessness**: Mind becomes agitated or scattered\n- Solution: Return to equanimity (brake pedal), then gently re-engage\n\n**Forcing**: Trying too hard to concentrate\n- Solution: Relax, let go, allow concentration to develop naturally\n\n## The Balance\n\nConcentration requires both:\n- **Relaxation** (equanimity/brake pedal)\n- **Engagement** (concentration/gas pedal)\n\nToo much brake = dullness\nToo much gas = tension\nPerfect balance = deep, stable, joyful concentration"
+    },
+    "agitation": {
+      "title": "Overcoming Agitation",
+      "summary": "Renewal of resolve and phase-based commitment",
+      "content": "When the mind is restless, scattered, or worried, use these specific techniques to anchor the drifting attention.\n\n## What is Agitation?\n\nAgitation manifests as:\n- Mind jumping from thought to thought\n- Inability to stay with the breath for even one cycle\n- Feeling restless or anxious\n- Constant planning or worrying\n- Physical fidgeting or discomfort\n\n## Renewal of Resolve Technique\n\nInstead of trying to force the whole meditation to be calm, commit to much smaller windows:\n\n### Phase-Based Resolve\n\n**Step 1**: Commit to following exactly ONE inhalation from beginning to end, including the pause\n\n**Step 2**: When that's complete, commit to following ONE exhalation from beginning to end, including the pause\n\n**Step 3**: Repeat, one phase at a time\n\nThis breaks the meditation into manageable pieces. You're not trying to meditate for 15 minutes—you're just trying to follow this one breath.\n\n### Second-by-Second Resolve\n\nIf the mind is extremely restless:\n\n**Commit to just ONE SECOND of focus at a time**\n\nCount: \"One... Two... Three...\" staying present for each second\n\nRepeat this for several minutes until the agitation subsides\n\n## Additional Techniques\n\n### Counting with Emphasis\nReturn to the basic counting sequence (1-10, 9-2, etc.) and count more deliberately, even out loud if needed\n\n### Physical Grounding\n- Feel your sit bones pressing into the cushion\n- Notice the weight of your hands\n- Feel your feet on the floor\n- This grounds scattered energy\n\n### Labeling the Agitation\nSimply note: \"Agitation... agitation... agitation...\"\n\nThis creates distance from the experience and often reduces its intensity\n\n### Acceptance\nSometimes the best approach is to accept: \"The mind is agitated right now. That's okay. I'll just sit with this.\"\n\nFighting agitation often makes it worse.\n\n## When to Use These Techniques\n\nUse renewal of resolve when:\n- You can't complete even one full breath cycle\n- Mind is very scattered\n- You're feeling overwhelmed\n- You need to rebuild basic stability\n\n## The Paradox\n\nThe more you accept the agitation and work with it gently (rather than fighting it), the faster it tends to settle."
+    },
+    "lethargy": {
+      "title": "Overcoming Lethargy",
+      "summary": "Physical and breath stimulation techniques",
+      "content": "If the mind \"falls asleep\" or loses its edge, apply physical and respiratory stimulation to sharpen awareness.\n\n## What is Lethargy?\n\nLethargy manifests as:\n- Mind becoming foggy or unclear\n- Drowsiness or sleepiness\n- Losing track of the breath\n- Head nodding forward\n- Awareness becoming dim or dull\n- Feeling heavy or sluggish\n\n## Physical Stimulation Techniques\n\n### Ear Rubbing\nRub the earlobes firmly to generate heat. The ears have many acupressure points that stimulate alertness.\n\n**How**: Pinch earlobes between thumb and forefinger, rub vigorously for 30 seconds\n\n### Arm Rubbing\nRub the arms from elbow to wrist with pressure, creating friction and heat.\n\n**How**: Use opposite hand to firmly rub from elbow down to wrist, both arms, 10-15 times each\n\n### Face Splashing\nSplash the face with cold water (if available during break)\n\n**How**: Cup hands with cold water, splash face 3-5 times, pat dry\n\n### Posture Adjustment\n- Sit up straighter\n- Roll shoulders back\n- Lift the crown of the head\n- Open eyes briefly (30 seconds)\n\n## Breath Stimulation Techniques\n\n### Rapid Breathing (Hyperventilation)\nPerform a series of rapid breaths lasting less than one second each\n\n**How**:\n1. Take 10-15 quick, shallow breaths through the nose\n2. Return to normal breathing\n3. Notice the increased alertness\n\n**Caution**: Don't overdo this—stop if you feel dizzy\n\n### Breath Holding\nHold a deep breath for as long as possible to sharpen perception and accelerate the heart rate\n\n**How**:\n1. Take a deep breath in\n2. Hold for 20-40 seconds (or as long as comfortable)\n3. Exhale slowly\n4. Return to normal breathing\n5. Notice the heightened awareness\n\n### Deep Breathing\nTake 5-10 very deep, full breaths to oxygenate the brain\n\n**How**:\n1. Inhale deeply through nose (count to 4)\n2. Hold briefly (count to 2)\n3. Exhale fully through nose (count to 6)\n4. Repeat 5-10 times\n\n## Preventive Measures\n\n### Before Meditation\n- Don't meditate immediately after eating\n- Ensure you're well-rested\n- Meditate at times when you're naturally alert\n- Drink water before sitting\n\n### During Meditation\n- Keep the room cool rather than warm\n- Sit in a well-lit area\n- Maintain strong posture\n- Open eyes if drowsiness persists\n\n## When Lethargy is Chronic\n\nIf you consistently experience lethargy:\n- Adjust your meditation time (try morning instead of evening)\n- Check your sleep quality\n- Evaluate your diet\n- Consider if you're genuinely tired and need rest\n\nSometimes the body is telling you it needs sleep, not meditation.\n\n## The Balance\n\nUse these techniques when needed, but don't create so much stimulation that you become agitated. The goal is alert, calm awareness—not hyperactive energy."
+    },
+    "glossary": {
+      "title": "Glossary of Terms",
+      "summary": "Key meditation concepts defined in plain language",
+      "content": "## Anapanasati\n**Literal**: \"Mindfulness of breathing\" (Pali language)\n**Meaning**: A meditation technique focused on observing the natural breath as an anchor for developing awareness, concentration, and insight\n**In practice**: The foundation of this 8-week course\n\n## Big Mind\n**Meaning**: The observing, spacious awareness that can witness thoughts and emotions without being swept away by them\n**Opposite**: Small mind (the reactive, story-making part of consciousness)\n**In practice**: \"Step back into Big Mind\" means creating distance from your reactions and observing them with curiosity rather than identification\n\n## Equanimity\n**Literal**: \"Even-mindedness\" or balance\n**Meaning**: The quality of remaining calm and balanced regardless of whether experiences are pleasant, unpleasant, or neutral\n**Not**: Indifference or not caring\n**Is**: Wise, balanced acceptance\n**In practice**: The \"brake pedal\" - letting go of craving for things to be different than they are\n\n## Sati\n**Literal**: \"Memory\" or \"remembering\" (Pali)\n**Meaning**: The active process of remembering the present moment; continuous awareness\n**In practice**: \"Mindfulness in front of you\" - meeting each moment as it arrives without looking back or leaning forward\n\n## Non-Attachment\n**Meaning**: The ability to experience things fully without clinging to pleasant experiences or pushing away unpleasant ones\n**Not**: Not caring or being emotionally distant\n**Is**: Experiencing fully while letting go\n**In practice**: Enjoying pleasant sensations without trying to make them stay; observing unpleasant sensations without trying to make them leave\n\n## Reaction\n**Meaning**: The automatic, habitual response of the mind to experiences (usually involving craving or aversion)\n**Examples**: \n- Wanting a pleasant sensation to continue\n- Wanting an unpleasant sensation to stop\n- Getting lost in thoughts about past or future\n**In practice**: The object of investigation in Stage 4 (Observing the Mind)\n\n## Small Mind\n**Meaning**: The reactive, emotional, story-making part of consciousness that gets caught up in drama and identifies with thoughts and emotions\n**Opposite**: Big Mind (observing awareness)\n**In practice**: When you're lost in worry, anger, or obsessive thinking, you're in small mind\n\n## Concentration (Samadhi)\n**Meaning**: The unification of mind around a single object (the breath); stable, continuous attention\n**Quality**: Effortless, bright, stable, unified\n**In practice**: The \"gas pedal\" - gently gathering attention more fully on the breath\n\n## Mudra\n**Meaning**: Symbolic hand gesture used in meditation\n**Purpose**: Focus the mind, embody specific qualities, complete energy circuits\n**Examples**: Dhyana mudra (contemplation), Bhumisparsa mudra (earth-touching)\n\n## The Six Senses\n**Meaning**: The traditional Buddhist enumeration of sensory experience\n**List**:\n1. Sight (visual)\n2. Hearing (auditory)\n3. Smell (olfactory)\n4. Taste (gustatory)\n5. Touch (tactile)\n6. Mind (mental phenomena - thoughts, emotions, memories)\n\n**In practice**: Used in the scanning phase of entering meditation\n\n## Zafu\n**Meaning**: Traditional round meditation cushion\n**Purpose**: Elevates the hips above the knees, allowing the spine to maintain its natural curve\n**Alternatives**: Half-moon cushion, meditation bench, folded blankets\n\n## The Brake Pedal\n**Meaning**: Metaphor for equanimity - letting go of craving\n**In practice**: When you notice yourself wanting the meditation to be different, \"press the brake\" and let go of that wanting\n\n## The Gas Pedal\n**Meaning**: Metaphor for concentration - gathering attention more fully\n**In practice**: After establishing equanimity, gently \"press the gas\" to deepen focus on the breath\n**Caution**: Must be soft and gentle, not forced"
+    }
   }
 }

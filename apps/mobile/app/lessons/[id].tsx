@@ -7,14 +7,28 @@ import { AchievementCelebration } from '../components/AchievementCelebration';
 import type { AchievementDefinition } from '../types/achievements';
 import { getLessonById } from '../data/lessons';
 import { MarkdownText } from '../components/MarkdownText';
+import { t } from '../services/i18n';
 
 export default function LessonDetail() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const router = useRouter();
-  const lesson = getLessonById(String(id)) || { title: `Lesson ${id}`, summary: '', content: 'Content coming soon...', category: 'foundation' as const };
+  const lesson = getLessonById(String(id));
   const [completed, setCompleted] = useState(false);
   const [celebration, setCelebration] = useState<AchievementDefinition | null>(null);
   const [saving, setSaving] = useState(false);
+
+  if (!lesson) {
+    return (
+      <SafeAreaView style={styles.wrapper} edges={['top']}>
+        <View style={styles.container}>
+          <Text style={styles.title}>Lesson not found</Text>
+        </View>
+      </SafeAreaView>
+    );
+  }
+
+  const title = t(lesson.titleKey);
+  const content = t(lesson.contentKey);
 
   useEffect(() => {
     if (id) {
@@ -47,8 +61,8 @@ export default function LessonDetail() {
   return (
     <SafeAreaView style={styles.wrapper} edges={['top']}>
       <ScrollView style={styles.container} contentContainerStyle={styles.scrollContent}>
-        <Text style={styles.title}>{lesson.title}</Text>
-        <MarkdownText content={lesson.content} />
+        <Text style={styles.title}>{title}</Text>
+        <MarkdownText content={content} />
       </ScrollView>
       
       <View style={styles.bottomActions}>

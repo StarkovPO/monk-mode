@@ -1,7 +1,7 @@
 export interface Preset {
   id: string;
-  label: string;
-  description: string;
+  labelKey: string;
+  descriptionKey: string;
   exerciseIds: string[];
   totalDurationMin: number;
 }
@@ -9,15 +9,15 @@ export interface Preset {
 export const presets: Preset[] = [
   {
     id: 'beginner',
-    label: 'Beginner',
-    description: '15-Minute Block (Basic Level or Express Practice) • 3 exercises',
+    labelKey: 'presets.beginner.label',
+    descriptionKey: 'presets.beginner.description',
     exerciseIds: ['entering-meditation', 'breath-counting', 'clear-comprehension'],
     totalDurationMin: 15,
   },
   {
     id: 'experienced',
-    label: 'Experienced',
-    description: '30-Minute Block (Confident Practice / Intermediate Level) • 5 exercises',
+    labelKey: 'presets.experienced.label',
+    descriptionKey: 'presets.experienced.description',
     exerciseIds: [
       'entering-intermediate',
       'counting-intermediate',
@@ -29,8 +29,8 @@ export const presets: Preset[] = [
   },
   {
     id: 'advanced',
-    label: 'Advanced',
-    description: '60-Minute Block (Deep Dive / Advanced Level) • 7 exercises',
+    labelKey: 'presets.advanced.label',
+    descriptionKey: 'presets.advanced.description',
     exerciseIds: [
       'entering-advanced',
       'counting-advanced',
