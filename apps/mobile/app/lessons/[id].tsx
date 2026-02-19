@@ -6,6 +6,7 @@ import { checkAndUnlockAchievements, isLessonCompleted } from '../services/achie
 import { AchievementCelebration } from '../components/AchievementCelebration';
 import type { AchievementDefinition } from '../types/achievements';
 import { getLessonById } from '../data/lessons';
+import { MarkdownText } from '../components/MarkdownText';
 
 export default function LessonDetail() {
   const { id } = useLocalSearchParams<{ id: string }>();
@@ -47,7 +48,7 @@ export default function LessonDetail() {
     <SafeAreaView style={styles.wrapper} edges={['top']}>
       <ScrollView style={styles.container} contentContainerStyle={styles.scrollContent}>
         <Text style={styles.title}>{lesson.title}</Text>
-        <Text style={styles.content}>{lesson.content}</Text>
+        <MarkdownText content={lesson.content} />
       </ScrollView>
       
       <View style={styles.bottomActions}>
