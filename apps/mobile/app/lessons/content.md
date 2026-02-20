@@ -2,8 +2,6 @@ Direct Contact: A Comprehensive Guide to the 8-Week Anapanasati Meditation Cours
 
 1. Course Philosophy and Objectives
 
-The "Direct Contact" course is a rigorous, 8-week practical program designed to establish a direct link between the practitioner and the present moment. Based on the practice of Anapanasati (Mindfulness of Breathing), the course aims to quiet the intrusive noise of the mind to achieve a state of profound peace and clarity.
-
 The central methodology is the development of the "nothing to do" skill—a deceptively difficult ability to stop following automatic thoughts and reactions. When the internal bustle and habitual restlessness are silenced through intentional slowing down, several "blessed states" naturally emerge:
 
 * Clear Understanding: A sharp, undistorted perception of reality.

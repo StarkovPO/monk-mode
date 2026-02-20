@@ -135,14 +135,62 @@ These elements should **never** be translated:
 ## Version History
 
 - **v1** (2025-12-11): Initial MVP with 6 languages, home menu only
+- **v2** (2026-02-20): Added exercises, presets, and lessons translations
+
+## Current Translation Scope
+
+**Fully Translated** (English & Russian):
+- ✅ Home menu (welcome, buttons)
+- ✅ Navigation buttons (Back to Home, Back to Lessons, etc.)
+- ✅ Presets (3 presets: Beginner, Experienced, Advanced)
+- ✅ Exercises (14 exercises with stages, descriptions, reminders)
+- ✅ Lessons (12 lessons: titles, summaries, full content, and action buttons)
+- ✅ Activity page (stats, empty state, loading/error states)
+- ✅ Summary page (navigation buttons)
+
+**Translation Keys by Section**:
+
+### Navigation (`navigation.*`)
+- `backToHome` - "← Back to Home"
+- `backToLessons` - "← Back to Lessons"
+- `back` - "← Back"
+- `backHome` - "← Back Home"
+
+### Activity Page (`activity.*`)
+- `loading` - Loading message
+- `error` - Error message
+- `retry` - Retry button
+- `emptyStateTitle` - Empty state title
+- `emptyStateText` - Empty state description
+- `currentStreak` - Current streak label
+- `day` / `days` - Singular/plural day labels
+- `longestStreak` - Longest streak label
+- `totalSessions` - Total sessions label
+
+### Lessons (`lessons.*`)
+- `markAsComplete` - Mark as Complete button
+- `completed` - Completed state
+- `saving` - Saving state
+- Individual lesson content (anapanasati, posture, mudras, stage1-6, agitation, lethargy, glossary)
+
+### Summary Page (`summary.*`)
+- `backToHome` - Back to Home button
+- `myActivity` - My Activity button
+
+**Languages with Complete Coverage**:
+- English (en) - ✅ Complete (all sections)
+- Russian (ru) - ✅ Complete (all sections)
+- Spanish (es) - ⚠️ Needs: navigation, activity, lessons buttons, summary
+- French (fr) - ⚠️ Needs: navigation, activity, lessons buttons, summary
+- German (de) - ⚠️ Needs: navigation, activity, lessons buttons, summary
+- Korean (ko) - ⚠️ Needs: navigation, activity, lessons buttons, summary
 
 ## Future Expansions
 
 Potential future translation scopes:
 
-- Preset selection screen
-- Lessons content
-- Activity/streak page
 - Settings screen
-- Meditation timer UI
-- Achievement descriptions
+- Meditation timer UI (pause, resume, skip buttons)
+- Achievement descriptions and names
+- Error messages and alerts
+- Onboarding/tutorial screens

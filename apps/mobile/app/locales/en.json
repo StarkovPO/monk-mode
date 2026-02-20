@@ -10,6 +10,28 @@
     "activity": "My Activity",
     "preset": "Presets"
   },
+  "navigation": {
+    "backToHome": "← Back to Home",
+    "backToLessons": "← Back to Lessons",
+    "back": "← Back",
+    "backHome": "← Back Home"
+  },
+  "activity": {
+    "loading": "Loading your stats...",
+    "error": "Failed to load streak data",
+    "retry": "Retry",
+    "emptyStateTitle": "Start Your Journey",
+    "emptyStateText": "Complete your first meditation session to start building your streak!",
+    "currentStreak": "Current streak",
+    "day": "day",
+    "days": "days",
+    "longestStreak": "Longest meditation day streak",
+    "totalSessions": "Total sessions"
+  },
+  "summary": {
+    "backToHome": "Back to Home",
+    "myActivity": "My Activity"
+  },
   "presets": {
     "beginner": {
       "label": "Beginner",
@@ -212,10 +234,13 @@
     }
   },
   "lessons": {
+    "markAsComplete": "Mark as Complete",
+    "completed": "Completed",
+    "saving": "Saving...",
     "anapanasati": {
       "title": "What is Anapanasati?",
       "summary": "Course philosophy and objectives",
-      "content": "The \"Direct Contact\" course is a rigorous, 8-week practical program designed to establish a direct link between the practitioner and the present moment. Based on the practice of Anapanasati (Mindfulness of Breathing), the course aims to quiet the intrusive noise of the mind to achieve a state of profound peace and clarity.\n\n## The Central Methodology\n\nThe development of the \"nothing to do\" skill—a deceptively difficult ability to stop following automatic thoughts and reactions. When the internal bustle and habitual restlessness are silenced through intentional slowing down, several \"blessed states\" naturally emerge:\n\n- **Clear Understanding**: A sharp, undistorted perception of reality\n- **Happiness**: A sense of well-being independent of external conditions\n- **Creative Energy**: The revitalization of mental and physical resources\n- **Loving-Kindness**: A natural orientation of care toward oneself and others\n\n## The Two Contracts\n\nSuccess in this course is predicated on two formal internal agreements:\n\n### Daily Practice Contract\n- **Frequency**: Practice every single day for the full 8-week duration\n- **Duration**: Minimum 15 minutes daily\n- **The Makeup Rule**: If a day is missed due to force majeure, perform a double session the following day\n\n### Balance of Effort\nMeditation requires a \"zealous and diligent\" investment of energy into every single second of awareness. Find the narrow path between the \"lazy laxity\" of a slouching posture and the \"excessive tension\" that overstimulates the mind."
+      "content": "Based on the practice of Anapanasati (Mindfulness of Breathing), the course aims to quiet the intrusive noise of the mind to achieve a state of profound peace and clarity.\n\n## The Central Methodology\n\nThe development of the \"nothing to do\" skill—a deceptively difficult ability to stop following automatic thoughts and reactions. When the internal bustle and habitual restlessness are silenced through intentional slowing down, several \"blessed states\" naturally emerge:\n\n- **Clear Understanding**: A sharp, undistorted perception of reality\n- **Happiness**: A sense of well-being independent of external conditions\n- **Creative Energy**: The revitalization of mental and physical resources\n- **Loving-Kindness**: A natural orientation of care toward oneself and others\n\n## The Two Contracts\n\nSuccess in this course is predicated on two formal internal agreements:\n\n### Daily Practice Contract\n- **Frequency**: Practice every single day for the full 8-week duration\n- **Duration**: Minimum 15 minutes daily\n- **The Makeup Rule**: If a day is missed due to force majeure, perform a double session the following day\n\n### Balance of Effort\nMeditation requires a \"zealous and diligent\" investment of energy into every single second of awareness. Find the narrow path between the \"lazy laxity\" of a slouching posture and the \"excessive tension\" that overstimulates the mind."
     },
     "posture": {
       "title": "Posture",

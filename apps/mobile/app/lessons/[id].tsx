@@ -77,7 +77,7 @@ export default function LessonDetail() {
           disabled={completed || saving}
         >
           <Text style={[styles.completeText, completed && styles.completeTextDone]}>
-            {completed ? 'Completed' : saving ? 'Saving...' : 'Mark as Complete'}
+            {completed ? t('lessons.completed') : saving ? t('lessons.saving') : t('lessons.markAsComplete')}
           </Text>
         </Pressable>
         <Pressable 
@@ -88,7 +88,7 @@ export default function LessonDetail() {
           ]}
           hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
         >
-          <Text style={styles.backText}>← Back to Lessons</Text>
+          <Text style={styles.backText}>{t('navigation.backToLessons')}</Text>
         </Pressable>
       </View>
       {celebration && (

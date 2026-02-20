@@ -6,6 +6,7 @@ import { Streaks } from './services/storage';
 import { checkAndUnlockAchievements } from './services/achievements';
 import { AchievementCelebration } from './components/AchievementCelebration';
 import type { AchievementDefinition } from './types/achievements';
+import { t } from './services/i18n';
 
 export default function Summary() {
   const router = useRouter();
@@ -126,10 +127,10 @@ export default function Summary() {
         )}
       </View>
       <Pressable style={styles.buttonSecondary} onPress={() => router.push('/activity')}>
-        <Text style={styles.buttonTextSecondary}>My Activity</Text>
+        <Text style={styles.buttonTextSecondary}>{t('summary.myActivity')}</Text>
       </Pressable>
       <Pressable style={styles.button} onPress={() => router.push('/')}>
-        <Text style={styles.buttonText}>Back to Home</Text>
+        <Text style={styles.buttonText}>{t('summary.backToHome')}</Text>
       </Pressable>
       {currentCelebration && (
         <AchievementCelebration

@@ -7,6 +7,7 @@ import type { Streaks } from './services/storage';
 import { DebugPanel } from './components/DebugPanel';
 import { AchievementGrid } from './components/AchievementGrid';
 import { checkAndUnlockAchievements } from './services/achievements';
+import { t } from './services/i18n';
 
 export default function Activity() {
   const router = useRouter();
@@ -50,7 +51,7 @@ export default function Activity() {
       <SafeAreaView style={styles.container} edges={['top']}>
         <View style={styles.loadingContainer}>
           <ActivityIndicator size="large" color="#1A1A1A" />
-          <Text style={styles.loadingText}>Loading your stats...</Text>
+          <Text style={styles.loadingText}>{t('activity.loading')}</Text>
         </View>
       </SafeAreaView>
     );
@@ -60,9 +61,9 @@ export default function Activity() {
     return (
       <SafeAreaView style={styles.container} edges={['top']}>
         <View style={styles.errorContainer}>
-          <Text style={styles.errorText}>{error}</Text>
+          <Text style={styles.errorText}>{t('activity.error')}</Text>
           <Pressable style={styles.retryButton} onPress={loadStreakData}>
-            <Text style={styles.retryText}>Retry</Text>
+            <Text style={styles.retryText}>{t('activity.retry')}</Text>
           </Pressable>
         </View>
         
@@ -75,7 +76,7 @@ export default function Activity() {
             ]}
             hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
           >
-            <Text style={styles.backText}>← Back</Text>
+            <Text style={styles.backText}>{t('navigation.back')}</Text>
           </Pressable>
         </View>
       </SafeAreaView>
@@ -84,7 +85,7 @@ export default function Activity() {
 
   const isEmptyState = streaks && streaks.totalDays === 0;
   const currentStreakCount = streaks?.currentStreak || 0;
-  const streakText = currentStreakCount === 1 ? 'day' : 'days';
+  const streakText = currentStreakCount === 1 ? t('activity.day') : t('activity.days');
 
   return (
     <SafeAreaView style={styles.container} edges={['top']}>
@@ -92,9 +93,9 @@ export default function Activity() {
         {isEmptyState ? (
           <View style={styles.emptyState}>
             <Text style={styles.emptyStateEmoji}>🧘</Text>
-            <Text style={styles.emptyStateTitle}>Start Your Journey</Text>
+            <Text style={styles.emptyStateTitle}>{t('activity.emptyStateTitle')}</Text>
             <Text style={styles.emptyStateText}>
-              Complete your first meditation session to start building your streak!
+              {t('activity.emptyStateText')}
             </Text>
           </View>
         ) : (
@@ -107,13 +108,13 @@ export default function Activity() {
 
             {/* Longest Streak Row */}
             <View style={styles.statRow}>
-              <Text style={styles.statLabel}>Longest meditation day streak</Text>
-              <Text style={styles.statValue}>{streaks?.longestStreak || 0} {streaks?.longestStreak === 1 ? 'day' : 'days'}</Text>
+              <Text style={styles.statLabel}>{t('activity.longestStreak')}</Text>
+              <Text style={styles.statValue}>{streaks?.longestStreak || 0} {streaks?.longestStreak === 1 ? t('activity.day') : t('activity.days')}</Text>
             </View>
 
             {/* Total Sessions Row */}
             <View style={styles.statRow}>
-              <Text style={styles.statLabel}>Total sessions</Text>
+              <Text style={styles.statLabel}>{t('activity.totalSessions')}</Text>
               <Text style={styles.statValue}>{streaks?.totalDays || 0}</Text>
             </View>
           </View>
@@ -131,7 +132,7 @@ export default function Activity() {
           ]}
           hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
         >
-          <Text style={styles.backText}>← Back Home</Text>
+          <Text style={styles.backText}>{t('navigation.backHome')}</Text>
         </Pressable>
       </View>
 
