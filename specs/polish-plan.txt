@@ -1,0 +1,5 @@
+Plan with priority goals:
+
+1. Change the lessosns decription and apply them to meditation.
+2. Add sounds to app when stage is changing and practice is over.
+3. Add full translation to all app.

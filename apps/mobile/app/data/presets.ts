@@ -1,7 +1,7 @@
 export interface Preset {
   id: string;
-  label: string;
-  description: string;
+  labelKey: string;
+  descriptionKey: string;
   exerciseIds: string[];
   totalDurationMin: number;
 }
@@ -9,38 +9,38 @@ export interface Preset {
 export const presets: Preset[] = [
   {
     id: 'beginner',
-    label: 'Beginner',
-    description: '3 exercises • ~15 minutes',
-    exerciseIds: ['breath-awareness', 'body-scan', 'gratitude-practice'],
+    labelKey: 'presets.beginner.label',
+    descriptionKey: 'presets.beginner.description',
+    exerciseIds: ['entering-meditation', 'breath-counting', 'clear-comprehension'],
     totalDurationMin: 15,
   },
   {
     id: 'experienced',
-    label: 'Experienced',
-    description: '5 exercises • ~25 minutes',
+    labelKey: 'presets.experienced.label',
+    descriptionKey: 'presets.experienced.description',
     exerciseIds: [
-      'breath-awareness',
-      'body-scan',
-      'loving-kindness',
-      'sound-meditation',
-      'gratitude-practice',
+      'entering-intermediate',
+      'counting-intermediate',
+      'comprehension-intermediate',
+      'mindfulness-flow',
+      'observing-reactions',
     ],
-    totalDurationMin: 25,
+    totalDurationMin: 30,
   },
   {
     id: 'advanced',
-    label: 'Advanced',
-    description: '7 exercises • ~50 minutes',
+    labelKey: 'presets.advanced.label',
+    descriptionKey: 'presets.advanced.description',
     exerciseIds: [
-      'breath-awareness',
-      'body-scan',
-      'loving-kindness',
-      'sound-meditation',
-      'visualization',
-      'open-awareness',
-      'heart-center',
+      'entering-advanced',
+      'counting-advanced',
+      'comprehension-advanced',
+      'mindfulness-advanced',
+      'observing-advanced',
+      'equanimity-advanced',
+      'concentration-advanced',
     ],
-    totalDurationMin: 50,
+    totalDurationMin: 60,
   },
 ];
 

@@ -9,6 +9,7 @@ import { MeditationTimer, TimerState } from './services/timer';
 import { playTransitionBeep, initializeAudio } from './services/audio';
 import { recordSessionStart } from './services/streaks';
 import { saveSession } from './services/storage';
+import { t } from './services/i18n';
 
 export default function Player() {
   const router = useRouter();
@@ -188,9 +189,9 @@ export default function Player() {
     <SafeAreaView style={styles.container} edges={['top']}>
       <View style={styles.content}>
         <Text style={styles.progress}>{progressText}</Text>
-        <Text style={styles.exerciseName}>{currentExercise?.name || 'Exercise'}</Text>
+        <Text style={styles.exerciseName}>{currentExercise?.nameKey ? t(currentExercise.nameKey) : 'Exercise'}</Text>
         <Text style={styles.timer}>{timeDisplay}</Text>
-        <Text style={styles.instruction}>{currentExercise?.reminderText || ''}</Text>
+        <Text style={styles.instruction}>{currentExercise?.reminderTextKey ? t(currentExercise.reminderTextKey) : ''}</Text>
       </View>
       
       <View style={styles.controls}>

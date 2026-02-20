@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, Pressable } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
+import { t } from './services/i18n';
 
 export default function Preset() {
   const router = useRouter();
@@ -37,7 +38,7 @@ export default function Preset() {
           ]}
           hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
         >
-          <Text style={styles.backText}>← Back to Home</Text>
+          <Text style={styles.backText}>{t('navigation.backToHome')}</Text>
         </Pressable>
       </View>
     </SafeAreaView>

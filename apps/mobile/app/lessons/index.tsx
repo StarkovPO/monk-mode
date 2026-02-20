@@ -1,30 +1,84 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { View, Text, StyleSheet, Pressable, ScrollView } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Link, useRouter } from 'expo-router';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { lessons } from '../data/lessons';
+import { t } from '../services/i18n';
 
-const lessons = [
-  { id: '1', title: 'Introduction to Meditation', summary: 'Learn the basics' },
-  { id: '2', title: 'Breath Awareness', summary: 'Focus on your breathing' },
-  { id: '3', title: 'Body Scan', summary: 'Progressive relaxation' },
-  { id: '4', title: 'Loving Kindness', summary: 'Cultivate compassion' },
-  { id: '5', title: 'Mindful Walking', summary: 'Meditation in motion' },
-  { id: '6', title: 'Visualization', summary: 'Use your imagination' },
-  { id: '7', title: 'Sound Meditation', summary: 'Listen deeply' },
-  { id: '8', title: 'Open Awareness', summary: 'Pure presence' },
-];
+const SCROLL_POSITION_KEY = '@monk_mode:lessons_scroll_position';
 
 export default function Lessons() {
   const router = useRouter();
+  const scrollViewRef = useRef<ScrollView>(null);
+  const scrollPositionRef = useRef(0);
+  const saveTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  // Restore scroll position when component mounts
+  useEffect(() => {
+    const restoreScrollPosition = async () => {
+      try {
+        const savedPosition = await AsyncStorage.getItem(SCROLL_POSITION_KEY);
+        if (savedPosition && scrollViewRef.current) {
+          const position = parseFloat(savedPosition);
+          scrollPositionRef.current = position;
+          // Use setTimeout to ensure ScrollView is fully rendered
+          setTimeout(() => {
+            scrollViewRef.current?.scrollTo({
+              y: position,
+              animated: false,
+            });
+          }, 100);
+        }
+      } catch (error) {
+        console.error('Error restoring scroll position:', error);
+      }
+    };
+
+    restoreScrollPosition();
+
+    // Save scroll position when component unmounts (navigating away)
+    return () => {
+      if (saveTimeoutRef.current) {
+        clearTimeout(saveTimeoutRef.current);
+      }
+      AsyncStorage.setItem(SCROLL_POSITION_KEY, scrollPositionRef.current.toString()).catch(
+        (error) => console.error('Error saving scroll position on unmount:', error)
+      );
+    };
+  }, []);
+
+  // Track scroll position and debounce saves to AsyncStorage
+  const handleScroll = (event: any) => {
+    const yOffset = event.nativeEvent.contentOffset.y;
+    scrollPositionRef.current = yOffset;
+
+    // Debounce AsyncStorage writes (save after 500ms of no scrolling)
+    if (saveTimeoutRef.current) {
+      clearTimeout(saveTimeoutRef.current);
+    }
+    saveTimeoutRef.current = setTimeout(() => {
+      AsyncStorage.setItem(SCROLL_POSITION_KEY, yOffset.toString()).catch((error) =>
+        console.error('Error saving scroll position:', error)
+      );
+    }, 500);
+  };
+
   return (
     <SafeAreaView style={styles.wrapper} edges={['top']}>
-      <ScrollView style={styles.container} contentContainerStyle={styles.scrollContent}>
+      <ScrollView 
+        ref={scrollViewRef}
+        style={styles.container} 
+        contentContainerStyle={styles.scrollContent}
+        onScroll={handleScroll}
+        scrollEventThrottle={16}
+      >
         <Text style={styles.title}>Meditation Lessons</Text>
         {lessons.map((lesson) => (
           <Link key={lesson.id} href={`/lessons/${lesson.id}`} asChild>
             <Pressable style={styles.lessonCard}>
-              <Text style={styles.lessonTitle}>{lesson.title}</Text>
-              <Text style={styles.lessonSummary}>{lesson.summary}</Text>
+              <Text style={styles.lessonTitle}>{t(lesson.titleKey)}</Text>
+              <Text style={styles.lessonSummary}>{t(lesson.summaryKey)}</Text>
             </Pressable>
           </Link>
         ))}
@@ -39,7 +93,7 @@ export default function Lessons() {
           ]}
           hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
         >
-          <Text style={styles.backText}>← Back to Home</Text>
+          <Text style={styles.backText}>{t('navigation.backToHome')}</Text>
         </Pressable>
       </View>
     </SafeAreaView>
